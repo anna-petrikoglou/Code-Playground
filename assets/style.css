@@ -1,0 +1,259 @@
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0px;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+}
+
+/*    .navbar-default .navbar-brand {
+ *    color: #62c9ba;
+ *    }
+ */
+
+header {
+  padding-top: 10px;
+  text-align: right;
+ /*    position: fixed;
+  *    top: 0;
+  *    z-index: 10;
+  */
+}
+
+main {
+  height: auto;
+  padding-bottom: 350px;
+}
+
+.presentation {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.client-side {
+  color: #fff;
+  background-color: #62c9ba;
+}
+
+.server-side {
+  background-color: #f8f8f8;
+}
+
+.story > p {
+  text-align: justify;
+  padding-top: 20px;
+}
+
+.story > h2 {
+  text-align: center;
+}
+
+.intro {
+  text-align: center;
+  margin: 20px 0 40px;
+}
+
+.intro > h1 {
+  font-family: 'Amatic SC', cursive;
+  text-transform: capitalize;
+  font-size: 80px;
+  margin: 0 auto;
+}
+
+.intro > h4 {
+  font-size: 20px;
+  line-height: 1.5em;
+  padding-top: 10px;
+}
+
+.basic-color {
+  color: #62c9ba;
+}
+
+.basic-color:hover {
+  color: #62c9ba;
+}
+
+.courses {
+  padding: 40px 0 30px;
+}
+
+.course {
+  margin-bottom: 40px;
+  /*
+   *  https://github.com/anna-petrikoglou/Portfolio/blob/master/css/style.css
+   *  box-shadow: 5px 10px 18px #888888;
+   *  or
+   *  https://css-tricks.com/almanac/properties/b/box-shadow/
+   *  -webkit-box-shadow: 0 10px 6px -6px #777;
+   *  -moz-box-shadow: 0 10px 6px -6px #777;
+   *  box-shadow: 0 10px 6px -6px #777;
+   */
+
+}
+
+.course > h1 {
+  color: #62c9ba;
+}
+
+.course-image {
+  margin: auto;
+  display: block;
+}
+
+.course .btn, button {
+  color: #fff;
+  background-color: #62c9ba;
+  border-color: #62c9ba;
+}
+
+.course .btn:active {
+  background-color: #62c9ba;
+  border-color: #62c9ba;
+}
+
+.information {
+  text-align: justify;
+}
+
+.practice-area {
+  width: 90%;
+}
+
+.button-options {
+  text-align: center;
+}
+
+.textarea-code {
+  /* https://jsfiddle.net/vaakash/5TF5h/ Line numbers */
+  background: url(http://i.imgur.com/2cOaJ.png);
+  background-attachment: local;
+  background-repeat: no-repeat;
+  padding-left: 35px;
+  padding-top: 10px;
+  border-color:#ccc;
+  font-size: 12px;
+  font-family: monospace;
+  text-align: left;
+}
+
+#htmleditor > h2 {
+  color: #62c9ba; /* #d9534f */
+}
+
+#csseditor > h2 {
+  color: #62c9ba; /* #337ab7 */
+}
+
+#jseditor > h2 {
+  color: #62c9ba; /* #f0ad4e */
+}
+
+#preview > h2 {
+  color: #62c9ba; /* #000 */
+}
+
+.iframe-code {
+  min-height: 500px;
+}
+
+#signupimagedown {
+  margin: 10px auto 40px auto;
+  background-image: url(/codeplayground/img/design.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  min-height: 300px;
+}
+
+.footer {
+  width: 100%;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  /* Set the fixed height of the footer here. */
+  height: auto;
+  /* Center the text vertically.
+   * height: 60px;
+   * line-height: 60px;
+   */
+  background-color: #f8f8f8;
+  z-index: 0;
+}
+
+.separator {
+  width: 100%;
+  border-top: 1px solid #e9eaea;
+  margin: 20px 0;
+}
+
+.footer .container {
+  padding-top: 20px;
+}
+
+.footer a {
+  color: #777;
+  font-size: 12px;
+}
+
+.footer-info, .footer h4 {
+  display: block;
+  line-height: 1.5em;
+  text-align: left;
+}
+
+.social a {
+  float: left;
+  margin-right: 3px;
+  line-height: 10px;
+}
+
+/* not working
+.social img {
+  color: #62c9ba;
+}
+*/
+
+.copyright {
+  color: #62c9ba;
+}
+
+/*
+font-family: 'Montserrat', sans-serif; -YES!
+font-family: 'Raleway', sans-serif; -YES
+font-family: 'Open Sans Condensed', sans-serif; -NO
+font-family: 'Quicksand', sans-serif; --blog
+font-family: 'Cairo', sans-serif; -NO
+font-family: 'Yantramanav', sans-serif; -NO
+font-family: 'Rajdhani', sans-serif; --small
+font-family: 'News Cycle', sans-serif; --small
+font-family: 'Assistant', sans-serif; --
+font-family: 'Didact Gothic', sans-serif; -YES
+font-family: 'Wire One', sans-serif; -NO
+
+
+font-family: 'Indie Flower', cursive; -NO
+font-family: 'Pacifico', cursive; -NO
+font-family: 'Hi Melody', cursive; --
+font-family: 'Shadows Into Light', cursive; -YES
+font-family: 'Amatic SC', cursive; -YES!
+font-family: 'Nanum Pen Script', cursive; -NO
+font-family: 'Annie Use Your Telescope', cursive; -NO
+font-family: 'Libre Barcode 39 Text', cursive; --barcode
+*/
