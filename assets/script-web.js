@@ -1,22 +1,25 @@
-window.onload = function() {
+$(document).ready(function() {
 
-  const runButton = document.getElementById("run-code-button");
-  const newPagePreview = document.getElementById("new-page-preview-button");
-  const resetButton = document.getElementById("reset-editors-button");
-
+  const runButton = $("#run-code-button");
+  const newPagePreview = $("#new-page-preview-button");
+  const resetButton = $("#reset-editors-button");
+  const form = $("form");
 
 // Display default code on window load.
-  runButton.click();
+  runButton.click(function () {
+    form.attr("target", "iframe-result");
+    form.submit();
+  });
 
 // Display result on a different page.
-// newPagePreview.onclick = newTab();
+  newPagePreview.click(function () {
+    form.attr("target", "_blank");
+    form.submit();
+  });
 
-/*  function newTab() {
-    const form = document.querySelector("form");
-    form.setAttribute("target", "_blank");
-  }
-*/
+// Empty all editors' code space.
+  resetButton.click(function () {
+    $(".textarea-code").html("");
+});
 
-  
-
-}
+});
