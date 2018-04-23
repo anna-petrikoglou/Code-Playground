@@ -18,10 +18,10 @@
     </div>
     <div class="col-md-3 social">
       <h4>Social</h4>
-      <a href="#" class="social-icon" target="_blank"><img src="img/icons/facebook" alt="Facebook icon" height="20" width="20" title="Like us on facebook!"></a>
-      <a href="#" class="social-icon" target="_blank"><img src="img/icons/messenger" alt="Messenger icon" height="20" width="20" title="Text us on messenger!"></a>
-      <!--<a href="#" class="social-icon" target="_blank"><img src="img/icons/youtube" alt="YouTube icon" placeholder="Youtube"></a>
-      <a href="#" class="social-icon" target="_blank"><img src="img/icons/instagram" alt="Instagram icon" placeholder="Instagram"></a>-->
+      <a href="#" class="social-icon" target="_blank"><img src="img/icons/facebook.png" alt="Facebook icon" height="20" width="20" title="Like us on facebook!"></a>
+      <a href="#" class="social-icon" target="_blank"><img src="img/icons/messenger.png" alt="Messenger icon" height="20" width="20" title="Text us on messenger!"></a>
+      <!--<a href="#" class="social-icon" target="_blank"><img src="img/icons/youtube.png" alt="YouTube icon" placeholder="Youtube"></a>
+      <a href="#" class="social-icon" target="_blank"><img src="img/icons/instagram.png" alt="Instagram icon" placeholder="Instagram"></a>-->
     </div>
   </div>
   <div class="separator"></div>
