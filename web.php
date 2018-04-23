@@ -13,28 +13,22 @@ $javascript = 'console.log("Welcome computer ninja!");';
     </div>
     <form method="post" target="iframe-result" action="/codeplayground/playground/web.php">
       <div class="button-options">
-        <button type="submit" name="action" value="here" id="run-code-button" class="btn"><i class="fa fa-play"></i> Run</button>
-        <button type="submit" name="action" value="there" id="new-page-preview-button" class="btn"><i class="fa fa-file"></i> Preview</button>
+        <button type="button" name="action" value="here" id="run-code-button" class="btn"><i class="fa fa-play"></i> Run</button>
+        <button type="button" name="action" value="there" id="new-page-preview-button" class="btn"><i class="fa fa-file"></i> Preview</button>
         <button type="reset" id="reset-editors-button" class="btn"><i class="fa fa-undo"></i> Reset</button>
       </div>
       <div class="row">
         <div id="htmleditor" class="col-md-4">
           <h2>HTML</h2>
-          <textarea class="form-control textarea-code" name="html" rows="18" autofocus>
-            <?php echo htmlspecialchars($html); ?>
-          </textarea>
+          <textarea class="form-control textarea-code" name="html" rows="18" autofocus><?php echo htmlspecialchars($html); ?></textarea>
         </div>
         <div id="csseditor" class="col-md-4">
           <h2>CSS</h2>
-          <textarea class="form-control textarea-code" name="css" rows="18">
-            <?php echo htmlspecialchars($css); ?>
-          </textarea>
+          <textarea class="form-control textarea-code" name="css" rows="18"><?php echo htmlspecialchars($css); ?></textarea>
         </div>
         <div id="jseditor" class="col-md-4">
           <h2>JavaScript</h2>
-          <textarea class="form-control textarea-code" name="javascript" rows="18">
-            <?php echo htmlspecialchars($javascript); ?>
-          </textarea>
+          <textarea class="form-control textarea-code" name="javascript" rows="18"><?php echo htmlspecialchars($javascript); ?></textarea>
         </div>
       </div>
     </form>
