@@ -17,21 +17,6 @@ window.onload = function() {
   }
 */
 
-  if ($_POST['action'] == 'here') {
-      //action for here
-      const form = document.querySelector("form");
-      form.setAttribute("target", "iframe-result");
-  } else if ($_POST['action'] == 'there') {
-      //action for there
-      const form = document.querySelector("form");
-      form.setAttribute("target", "_blank");
-  }
-
-
-// Empty all editors' code space. - NOT WORKING -> RESET BUTTON INSTEAD
-  resetButton.click(function() {
-    const codeAreas = document.querySelectorAll(".textarea-code");
-    codeAreas.innerHTML("");
-  });
+  
 
 }
