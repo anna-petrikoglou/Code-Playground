@@ -11,7 +11,7 @@ $javascript = 'console.log("Welcome computer ninja!");';
     <div class="row intro">
       <h1>Let's practice</h1>
     </div>
-    <form method="post" target="iframe-result" action="/codeplayground/playground/web.php">
+    <form method="post" target="iframe-result" action="playground/web.php">
       <div class="button-options">
         <button type="button" name="action" value="here" id="run-code-button" class="btn"><i class="fa fa-play"></i> Run</button>
         <button type="button" name="action" value="there" id="new-page-preview-button" class="btn"><i class="fa fa-file"></i> Preview</button>
