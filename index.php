@@ -32,14 +32,14 @@
         <img class="course-image" src="img/stylize.png" alt="Ruler and pencil" height="200" width="200">
         <h1>CSS</h1>
         <h6>Cascading Style Sheets</h6>
-        <p class="information">Includes the rules used for applying styles to the HTML document. It provides numerous and impressive formatting capabilities. CSS configures individual or grouped elements of the document, in order to create engaging content and optimize a page's presentation.</p>
+        <p class="information">Includes all the rules used for applying styles to the HTML document. It provides numerous and impressive formatting capabilities. CSS configures individual or grouped elements of the document, in order to create engaging content and optimize a page's presentation.</p>
         <p><a class="btn btn-primary" href="#">Practice <i class="fa fa-arrow-right"></i></a></p>
       </div>
       <div class="col-md-4 course">
         <img class="course-image" src="img/screwdriver.png" alt="Screwdriver" height="200" width="200">
         <h1>JavaScript</h1>
         <h6>or ECMAScript</h6>
-        <p class="information">One of the most popular, object-oriented, programming languages​​. Predominantly used for designing pages on the internet. JS includes a set of commands, that provide access to the document and allow interaction, changes and browsing among respective documents.</p>
+        <p class="information">One of the most popular, object-oriented, programming languages. Predominantly used for designing pages on the internet. JS includes a set of commands, that provide access to the document and allow interaction, changes and browsing among respective documents.</p>
         <p><a class="btn btn-warning" href="try.php">Practice <i class="fa fa-arrow-right"></i></a></p>
       </div>
     </div>
