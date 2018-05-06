@@ -43,7 +43,7 @@ $javascript = 'console.log("Welcome computer ninja!");';
       <div class="button-options">
       <?php
         if (isset($_SESSION['u_id'])) {
-          echo '<button type="button" id="save-project-button" class="btn"><i class="fa       fa-save"></i> Save</button>';
+          echo '<button type="button" id="save-project-button" class="btn"><i class="fa fa-save"></i> Save</button>';
         }
       ?>
       </div>
