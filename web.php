@@ -1,11 +1,12 @@
 <?php require 'includes/head.php'; ?>
 <?php require 'includes/nav.php'; ?>
+
 <?php
 $html = '<h1>Press "Ctrl + Shift + i"!</h1>';
 $css = 'h1 {color: #62c9ba;}';
 $javascript = 'console.log("Welcome computer ninja!");';
-
 ?>
+
 <main>
   <div class="container practice-area">
     <div class="row intro">
@@ -38,6 +39,15 @@ $javascript = 'console.log("Welcome computer ninja!");';
         <iframe class="form-control iframe-code" name="iframe-result"></iframe>
       </div>
     </div>
+    <form id="saveForm" method="post" target="iframe-result" action="system/web.php">
+      <div class="button-options">
+      <?php
+        if (isset($_SESSION['u_id'])) {
+          echo '<button type="button" id="save-project-button" class="btn"><i class="fa       fa-save"></i> Save</button>';
+        }
+      ?>
+      </div>
+    </form>
   </div>
-  <script src="assets/script-web.js" type="text/javascript"></script>
+  <script src="assets/web.js" type="text/javascript"></script>
   <?php require 'includes/footer.php'; ?>
