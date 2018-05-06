@@ -3,7 +3,7 @@ window.onload = function() {
   const runButton = document.getElementById("run-code-button");
   const newPagePreview = document.getElementById("new-page-preview-button");
   const resetButton = document.getElementById("reset-editors-button");
-  const form = document.querySelector("form");
+  const form = document.getElementById("webform");
   const list = document.getElementsByClassName("textarea-code");
 
 // Display default code on window load.
