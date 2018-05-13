@@ -1,5 +1,11 @@
 <?php
+
   session_start();
+
+  register_shutdown_function(function() {
+    unset($_SESSION['submission']);
+  });
+
 ?>
 
 <nav class="navbar navbar-default">
@@ -32,10 +38,8 @@
             //Use this same isset() function to change any content on any page, when a user is logged in.
             //echo "You are logged in!";
             // <input id="logoutInput" type="hidden" name="logoutInput" value="N/A"/> value attribute?
-            echo '<form class="nav navbar-nav navbar-right" action="system/logout.php" method="post" id="logoutForm">
-                  <button class="btn" id="logoutButton" type="submit" name="submit">Logout</button>
-                  </form>
-                  <li><a href="#">Logout</a></li>';
+            echo '<li><a href="account.php">My Account</a></li>
+                  <li><a href="system/logout.php">Logout</a></li>';
           } else {
             echo '<li><a href="signup.php">Sign up</a></li>
                   <li><a href="login.php">Login</a></li>';
