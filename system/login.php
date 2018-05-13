@@ -2,6 +2,12 @@
 
 session_start();
 
+register_shutdown_function(function() {
+  unset($_SESSION['submission']);
+});
+
+$_SESSION['submission'] = $_POST;
+
 if (isset($_POST['submit'])) {
   include 'database.php';
 
