@@ -11,7 +11,7 @@
         <div class="form-group">
           <label class="control-label col-sm-3" for="first-name">First Name:</label>
           <div class="col-sm-6">
-            <input type="text" autocomplete="off" class="form-control" id="first-name" placeholder="Enter your first name" name="first-name" required maxlength="50">
+            <input type="text" autocomplete="off" class="form-control" id="first-name" placeholder="Enter your first name" name="first-name" required maxlength="50" autofocus>
           </div>
         </div>
         <div class="form-group">
