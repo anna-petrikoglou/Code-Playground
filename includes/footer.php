@@ -14,7 +14,7 @@
     </div>
     <div class="col-md-3">
       <h4>Contact</h4>
-      <a href="https://google.com" class="footer-info">Form</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScKWPsrGPX-fWZ3qgZBKEKuW0FMkb4vWP9WZcjwZufBwmdx1Q/viewform?usp=sf_link" target="_blank" class="footer-info">Form</a>
     </div>
     <div class="col-md-3 social">
       <h4>Social</h4>
