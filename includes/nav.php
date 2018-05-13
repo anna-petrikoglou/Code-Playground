@@ -1,13 +1,3 @@
-<?php
-
-  session_start();
-
-  register_shutdown_function(function() {
-    unset($_SESSION['submission']);
-  });
-
-?>
-
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
