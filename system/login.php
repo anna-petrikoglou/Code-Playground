@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
       header("Location: ../login.php?login=not_existing_user");
       exit('Not an existing user!');
     } else {
-      if ($row == mysqli_fetch_assoc($result)) {
+      if ($row = mysqli_fetch_assoc($result)) {
         //echo $row['user_username'];
         //De-hashing the password
         $hashedPwdCheck = password_verify($password, $row['user_password']);
