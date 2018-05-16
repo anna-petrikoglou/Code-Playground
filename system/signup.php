@@ -18,18 +18,18 @@ if (isset($_POST['submit'])) {
   //extra style (e.g. red parts)
   if ( strlen($first_name) < 3) {
     unset($_SESSION['submission']['first-name']);
-    header("Location: ../signup.php?signup=inadequate_first_name_input_length_at_least_three_characters_needed");
+    header("Location: ../signup.php?signup=inadequate_input_length");
     exit('Inadequate input length!');
   } elseif (strlen($last_name) < 3) {
     unset($_SESSION['submission']['last-name']);
-    header("Location: ../signup.php?signup=inadequate_last_name_input_length_at_least_three_characters_needed");
+    header("Location: ../signup.php?signup=inadequate_input_length");
     exit('Inadequate input length!');
   } elseif (strlen($username) < 3) {
     unset($_SESSION['submission']['username']);
-    header("Location: ../signup.php?signup=inadequate_username_input_length_at_least_three_characters_needed");
+    header("Location: ../signup.php?signup=inadequate_input_length");
     exit('Inadequate input length!');
   } elseif (strlen($password) < 4) {
-    header("Location: ../signup.php?signup=inadequate_password_input_length_at_least_four_characters_needed");
+    header("Location: ../signup.php?signup=inadequate_input_length");
     exit('Inadequate input length!');
   } elseif (!preg_match("/^[a-zA-Z]*$/", $first_name)) {
     //Check if input characters are valid
@@ -62,7 +62,7 @@ if (isset($_POST['submit'])) {
           //Hashing the Password
           $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
           //Insert the user into the database
-          $sql = "INSERT INTO users (user_first_name, user_last_name, user_email, user_username, user_password) VALUES ('$first_name', '$last_name', '$email', '$username', '$hashedPassword');";
+          $sql = "INSERT INTO users (user_first_name, user_last_name, user_email, user_username, user_password, user_date) VALUES ('$first_name', '$last_name', '$email', '$username', '$hashedPassword', NOW());";
           mysqli_query($connection, $sql); //or $result = mysqli_query($connection, $sql);
           header("Location: ../login.php?signup=success");
           exit('Successfully signed up!');
