@@ -22,25 +22,25 @@ if (isset($_SESSION['u_id'])) {
         <div class="form-group">
           <label class="control-label col-sm-3" for="first-name">First Name:</label>
           <div class="col-sm-6">
-            <input type="text" autocomplete="first-name" class="form-control" id="first-name" placeholder="Enter your first name" name="first-name" required maxlength="50" value="<?php echo htmlspecialchars($_SESSION['submission']['first-name']); ?>" autofocus>
+            <input type="text" autocomplete="first-name" class="form-control" id="first-name" placeholder="Enter your first name" name="first-name" required maxlength="50" value="<?php if (isset($_SESSION['submission'])) { echo htmlspecialchars($_SESSION['submission']['first-name']); } ?>" autofocus>
           </div>
         </div>
         <div class="form-group">
           <label class="control-label col-sm-3" for="last-name">Last Name:</label>
           <div class="col-sm-6">
-            <input type="text" autocomplete="last-name" class="form-control" id="last-name" placeholder="Enter your last name" name="last-name" required maxlength="70" value="<?php echo htmlspecialchars($_SESSION['submission']['last-name']); ?>">
+            <input type="text" autocomplete="last-name" class="form-control" id="last-name" placeholder="Enter your last name" name="last-name" required maxlength="70" value="<?php if (isset($_SESSION['submission'])) { echo htmlspecialchars($_SESSION['submission']['last-name']); } ?>">
           </div>
         </div>
         <div class="form-group">
           <label class="control-label col-sm-3" for="email">Email:</label>
           <div class="col-sm-6">
-            <input type="text" autocomplete="email" class="form-control" id="email" placeholder="Enter your email" name="email" required maxlength="100" value="<?php echo htmlspecialchars($_SESSION['submission']['email']); ?>">
+            <input type="text" autocomplete="email" class="form-control" id="email" placeholder="Enter your email" name="email" required maxlength="100" value="<?php if (isset($_SESSION['submission'])) { echo htmlspecialchars($_SESSION['submission']['email']); } ?>">
           </div>
         </div>
         <div class="form-group">
           <label class="control-label col-sm-3" for="username">Username:</label>
           <div class="col-sm-6">
-            <input type="text" autocomplete="username" class="form-control" id="username" placeholder="Type your username" name="username" required maxlength="100" value="<?php echo htmlspecialchars($_SESSION['submission']['username']); ?>">
+            <input type="text" autocomplete="username" class="form-control" id="username" placeholder="Type your username" name="username" required maxlength="100" value="<?php if (isset($_SESSION['submission'])) { echo htmlspecialchars($_SESSION['submission']['username']); } ?>">
           </div>
         </div>
         <div class="form-group">
@@ -50,7 +50,7 @@ if (isset($_SESSION['u_id'])) {
           </div>
         </div>
         <div class="form-group">
-          <label class="control-label col-sm-3" for="confirm-password">Password:</label>
+          <label class="control-label col-sm-3" for="confirm-password">Confirmation:</label>
           <div class="col-sm-6">
             <input type="password" autocomplete="confirm-password" class="form-control" id="confirm-password" placeholder="Confirm your password" name="confirm-password" required maxlength="256">
           </div>

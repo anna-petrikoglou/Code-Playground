@@ -5,7 +5,7 @@ require 'includes/head.php';
 require 'includes/nav.php';
 
 
-if (isset($_GET[project_id]) && isset($_SESSION['u_id'])) {
+if (isset($_GET['project_id']) && isset($_SESSION['u_id'])) {
   $sql = "SELECT * FROM projects WHERE project_id = '".$_GET['project_id']."' && user_id = '".$_SESSION['u_id']."'";
   $result = mysqli_query($connection, $sql);
   $resultCheck = mysqli_num_rows($result);
