@@ -9,6 +9,7 @@ $html = '<h1>Press "Ctrl + Shift + i"!</h1>';
 $css = 'h1 {color: #62c9ba;}';
 $javascript = 'console.log("Welcome computer ninja!");';
 $project_name = 'Untitled';
+$project_id = 0;
 
 if (isset($_GET['project_id']) && isset($_SESSION['u_id'])) {
   $sql = "SELECT * FROM projects WHERE project_id = '".$_GET['project_id']."' && user_id = '".$_SESSION['u_id']."'";
@@ -22,6 +23,9 @@ if (isset($_GET['project_id']) && isset($_SESSION['u_id'])) {
     $css = $row['project_css'];
     $javascript = $row['project_javascript'];
     $project_name = $row['project_name'];
+    $project_id = $row['project_id'];
+    header("Location: ./web.php?project_id=$project_id");
+    exit();
   }
 }
 
@@ -44,7 +48,7 @@ if (isset($_GET['project_id']) && isset($_SESSION['u_id'])) {
             echo '<div class="row"><div class="form-group" id="project-title">
                   <label class="control-label basic-color" for="project-name">Title:</label>
                   <div><input type="text" autocomplete="project-name" class="form-control" id="project-name" value="'.$project_name.'" placeholder="Name this project" name="project-name" required maxlength="100">
-                  </div></div><div><input type="hidden" id="project-id" name="project-id" value="<?php echo htmlspecialchars($row->project_id); ?>"></div></div>';
+                  </div></div><div><input type="hidden" id="project-id" name="project-id" value="'.$project_id.'"></div></div>';
           }
         ?>
       </div>
