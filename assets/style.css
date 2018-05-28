@@ -12,6 +12,28 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+.warnings {
+  text-align: center;
+  color: #62c9ba;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.blink {
+  /* animation: blinker 1s linear infinite; */
+  text-decoration: blink;
+	-webkit-animation-name: blink;
+	-webkit-animation-duration: 0.6s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:ease-in-out;
+	-webkit-animation-direction: alternate;
+}
+
+@-webkit-keyframes blink {
+  from {opacity: 1.0;}
+  to {opacity: 0.0;}
+}
+
 .navbar {
   margin-bottom: 0;
   border-radius: 0px;
@@ -23,20 +45,61 @@ body {
 /*    .navbar-default .navbar-brand {
  *    color: #62c9ba;
  *    }
+ *
+ *    header {
+ *    padding-top: 10px;
+ *    text-align: right;
+ *
+ *    position: fixed;
+ *    top: 0;
+ *    z-index: 10;
+ *    }
+ *
+ *
  */
-
-header {
-  padding-top: 10px;
-  text-align: right;
- /*    position: fixed;
-  *    top: 0;
-  *    z-index: 10;
-  */
-}
 
 main {
   height: auto;
   padding-bottom: 350px;
+}
+
+.service-checkbox img, .service-checkbox > p {
+  display: inline;
+  padding: 5px;
+  height: 60px;
+}
+
+.service-checkbox img:hover, .about-support .about:hover {
+  /* https://www.webdesignerdepot.com/2014/05/8-simple-css3-transitions-that-will-wow-your-users/ */
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
+.about {
+  height: 300px;
+}
+
+.about img {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+}
+
+.about-control-panel {
+  margin-top: 25%;
+  margin-left: 20px;
+  border-left: 1px solid #ccc;
+}
+
+.rotate:hover {
+  /* https://www.webdesignerdepot.com/2014/05/8-simple-css3-transitions-that-will-wow-your-users/ */
+  -webkit-transform: rotateZ(-30deg);
+  -ms-transform: rotateZ(-30deg);
+  transform: rotateZ(-30deg);
 }
 
 .presentation {
@@ -49,7 +112,7 @@ main {
   background-color: #62c9ba;
 }
 
-.server-side {
+.server-side, .about-services, .about-functionalities {
   background-color: #f8f8f8;
 }
 
@@ -64,7 +127,7 @@ main {
 
 .intro {
   text-align: center;
-  margin: 20px 0 40px;
+  margin: 40px 0;
 }
 
 .intro > h1 {
@@ -89,7 +152,7 @@ main {
 }
 
 .courses {
-  padding: 40px 0 30px;
+  padding: 40px 0 0;
 }
 
 .course {
@@ -107,7 +170,7 @@ main {
 }
 
 .course:last-of-type {
-  margin-bottom: 100px;
+  margin-bottom: 130px;
 }
 
 .course > h1 {
@@ -153,26 +216,25 @@ main {
   font-size: 12px;
   font-family: monospace;
   text-align: left;
+  resize: none;
+  /* overflow: scroll; */
 }
 
-#htmleditor > h2 {
-  color: #62c9ba; /* #d9534f */
+#htmleditor > h2,
+#csseditor > h2,
+#jseditor > h2,
+#phpeditor > h2,
+#sqleditor > h2,
+.preview > h2 {
+  color: #62c9ba;
 }
 
-#csseditor > h2 {
-  color: #62c9ba; /* #337ab7 */
+.preview {
+  margin-bottom: 70px;
 }
 
-#jseditor > h2 {
-  color: #62c9ba; /* #f0ad4e */
-}
-
-#preview {
-  margin-bottom: 50px;
-}
-
-#preview > h2 {
-  color: #62c9ba; /* #000 */
+#php-preview {
+  margin-bottom: 470px;
 }
 
 #project-title {
@@ -187,6 +249,10 @@ main {
 
 .iframe-code {
   min-height: 400px;
+}
+
+#signuppage, #loginpage {
+  margin-bottom: 70px;
 }
 
 #signupimagedown {
@@ -288,3 +354,33 @@ main {
     padding: 0 12%;
   }
 }
+
+
+
+/*
+Paragraphs (p)
+font-family: 'Montserrat', sans-serif; -YES!
+font-family: 'Raleway', sans-serif; -YES
+font-family: 'Open Sans Condensed', sans-serif; -NO
+font-family: 'Quicksand', sans-serif; --blog
+font-family: 'Cairo', sans-serif; -NO
+font-family: 'Yantramanav', sans-serif; -NO
+font-family: 'Rajdhani', sans-serif; --small
+font-family: 'News Cycle', sans-serif; --small
+font-family: 'Assistant', sans-serif; --
+font-family: 'Didact Gothic', sans-serif; -YES
+font-family: 'Wire One', sans-serif; -NO
+
+Headings (h1)
+font-family: 'Indie Flower', cursive; -NO
+font-family: 'Pacifico', cursive; -NO
+font-family: 'Hi Melody', cursive; --
+font-family: 'Shadows Into Light', cursive; -YES
+font-family: 'Amatic SC', cursive; -YES!
+font-family: 'Nanum Pen Script', cursive; -NO
+font-family: 'Annie Use Your Telescope', cursive; -NO
+font-family: 'Libre Barcode 39 Text', cursive; --barcode
+
+Colors
+#d9534f, #337ab7, #f0ad4e
+*/
