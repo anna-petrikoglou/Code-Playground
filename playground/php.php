@@ -1,9 +1,11 @@
 <?php
 
-if(!isset($_POST['html'])){
-  header("Location: ../html.php");
+if(!isset($_POST['php'])) {
+  header("Location: ../php.php");
   exit();
 }
+
+$source = $_POST['php'];
 
 ?>
 
@@ -14,6 +16,6 @@ if(!isset($_POST['html'])){
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <?php echo $_POST['html']; ?>
+    <?php echo eval($source.";"); ?>
   </body>
 </html>

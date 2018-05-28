@@ -1,3 +1,12 @@
+<?php
+
+if(!isset($_POST['html']) or !isset($_POST['css']) or !isset($_POST['javascript'])){
+  header("Location: ../web.php");
+  exit();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
