@@ -14,58 +14,58 @@ if (isset($_POST['submit'])) {
   $password = mysqli_real_escape_string($connection, $_POST['password']);
   $confirm_password = mysqli_real_escape_string($connection, $_POST['confirm-password']);
 
-  //Error handlers
-  //extra style (e.g. red parts)
+  // Error handlers
   if ( strlen($first_name) < 3) {
     unset($_SESSION['submission']['first-name']);
     header("Location: ../signup.php?signup=inadequate_input_length");
-    exit('Inadequate input length!');
+    exit();
   } elseif (strlen($last_name) < 3) {
     unset($_SESSION['submission']['last-name']);
     header("Location: ../signup.php?signup=inadequate_input_length");
-    exit('Inadequate input length!');
+    exit();
   } elseif (strlen($username) < 3) {
     unset($_SESSION['submission']['username']);
     header("Location: ../signup.php?signup=inadequate_input_length");
-    exit('Inadequate input length!');
-  } elseif (strlen($password) < 4) {
-    header("Location: ../signup.php?signup=inadequate_input_length");
-    exit('Inadequate input length!');
+    exit();
   } elseif (!preg_match("/^[a-zA-Z]*$/", $first_name)) {
-    //Check if input characters are valid
+    // Check if input characters are valid
     unset($_SESSION['submission']['first-name']);
     header("Location: ../signup.php?signup=invalid_first_name");
-    exit('Invalid first name!');
+    exit();
   } elseif(!preg_match("/^[a-zA-Z]*$/", $last_name)) {
     unset($_SESSION['submission']['last-name']);
     header("Location: ../signup.php?signup=invalid_last_name");
-    exit('Invalid last name!');
-  }else {
-    //Check if email is valid
+    exit();
+  } elseif (strlen($password) < 4) {
+    header("Location: ../signup.php?signup=inadequate_input_length");
+    exit();
+  } else {
+    // Check if email is valid
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
       unset($_SESSION['submission']['email']);
       header("Location: ../signup.php?signup=invalid_email_address");
-      exit('Invalid e-mail address!');
+      exit();
     } else {
       $sql = "SELECT * FROM users WHERE user_username = '$username' OR user_email = '$email'";
       $result = mysqli_query($connection, $sql);
       $resultCheck = mysqli_num_rows($result);
-
+      // Check if user exists
       if ($resultCheck > 0) {
         header("Location: ../signup.php?signup=already_used_username_or_email");
-        exit('Username or e-mail already used!');
+        exit();
       } else {
+        // Check passwords' matching
         if ($confirm_password !== $password) {
           header("Location: ../signup.php?signup=not_matching_passwords");
-          exit('Two passwords do not match!');
+          exit();
         } else {
-          //Hashing the Password
+          // Hashing the Password
           $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-          //Insert the user into the database
+          // Insert user into database
           $sql = "INSERT INTO users (user_first_name, user_last_name, user_email, user_username, user_password, user_date) VALUES ('$first_name', '$last_name', '$email', '$username', '$hashedPassword', NOW());";
           mysqli_query($connection, $sql); //or $result = mysqli_query($connection, $sql);
           header("Location: ../login.php?signup=success");
-          exit('Successfully signed up!');
+          exit();
         }
       }
     }

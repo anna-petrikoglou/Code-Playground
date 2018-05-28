@@ -10,8 +10,8 @@ if (isset($_POST['submit'])) {
   $username = mysqli_real_escape_string($connection, $_POST['identification']);
   $password = mysqli_real_escape_string($connection, $_POST['countersign']);
 
-  //Error handlers
-  //Check if inputs are empty
+  // Error handlers
+  // Check if inputs are empty
   if (empty($username) || empty($password)) {
     header("Location: ../login.php?login=username_and_password_required");
     exit();
@@ -22,24 +22,24 @@ if (isset($_POST['submit'])) {
     if ($resultCheck < 1) {
       unset($_SESSION['submission']['identification']);
       header("Location: ../login.php?login=not_existing_user");
-      exit('Not an existing user!');
+      exit();
     } else {
       if ($row = mysqli_fetch_assoc($result)) {
-        //echo $row['user_username'];
-        //De-hashing the password
+        // echo $row['user_username'];
+        // De-hashing the password
         $hashedPwdCheck = password_verify($password, $row['user_password']);
         if ($hashedPwdCheck == false) {
           header("Location: ../login.php?login=invalid_password");
-          exit('Invalid password!');
+          exit();
         } elseif ($hashedPwdCheck == true) {
-          //Log in the user here
+          // Log in user here
           $_SESSION['u_id'] = $row['user_id'];
           $_SESSION['u_first_name'] = $row['user_first_name'];
           $_SESSION['u_last_name'] = $row['user_last_name'];
           $_SESSION['u_email'] = $row['user_email'];
           $_SESSION['u_username'] = $row['user_username'];
           header("Location: ../account.php?login=success");
-          exit('Successfully logged in!');
+          exit();
         }
       }
     }
