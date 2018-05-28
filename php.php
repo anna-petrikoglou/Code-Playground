@@ -47,11 +47,11 @@ if (isset($_GET['project_id']) && isset($_SESSION['u_id'])) {
         <div class="form-group" id="project-title">
           <label class="control-label basic-color" for="project-name">Title:</label>
           <div>
-            <input type="text" autocomplete="project-name" class="form-control" id="project-name" value="<?php echo $project_name ?>" placeholder="Name this project" name="project-name" required maxlength="100">
+            <input type="text" autocomplete="project-name" class="form-control" id="project-name" value="<?php echo htmlspecialchars($project_name) ?>" placeholder="Name this project" name="project-name" required maxlength="100">
           </div>
       </div>
       <div>
-        <input type="hidden" id="project-id" name="project-id" value="<?php echo htmlspecialchars($row->project_id); ?>">
+        <input type="hidden" id="project-id" name="project-id" value="<?php echo $project_id; ?>">
         </div>
       </div>
     </div>
