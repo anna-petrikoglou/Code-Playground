@@ -14,8 +14,8 @@ require 'includes/header.php';
         <img src="img/client.png" class="big-image" alt="Two kids programming a robot, using a computer">
       </div>
       <div class="col-md-6 story">
-        <h2>As an example</h2>
-        <p>Imagine you have got some plain materials... such as metal, plastic or wooden parts, screws or nails and cables or ropes. Now, you would like to make something out of these. But, you don't know how. Would it be simple or complicated, colorful or black-and-white, big or small, static or active? <br><br>Thank God, there are also some handy tools! Hammers, screwdrivers, pliers etc.. Not to mention, handbooks and instruction notes. Everything feels much feasible that way, don't you think? <br><br>This is how it works with our web technologies. Your plain materials are like the HTML elements. Your operating tools are the JS scripts. And... guess what! You've got a huge amount of styling options to transmute this into an amazing work of art! That's obviously CSS. </p>
+        <h2>Let's Get Started</h2>
+        <p>Imagine you have got some plain materials... lots of metal and plastic or wooden parts, screws or nails and cables or ropes. Now, you would like to make something out of these. But, you don't know how. Would it be simple or complicated, colorful or black-and-white, big or small, static or active? <br><br>Thank God, there are also some handy tools! Hammers, screwdrivers, pliers etc.. Not to mention, handbooks and instruction notes. Everything seems more feasible that way, don't you think? <br><br>This is how it works with our web technologies. Your plain materials are like the HTML elements. Your operating tools are the JS scripts. And... guess what! You've got a huge amount of styling options to transmute this into an amazing work of art! That's obviously CSS. </p>
       </div>
     </div>
   </div>
@@ -59,8 +59,8 @@ require 'includes/header.php';
   <div class="presentation server-side">
     <div class="container">
       <div class="col-md-6 story">
-        <h2>Another example</h2>
-        <p>Imagine you have got some plain materials... such as metal, plastic or wooden parts, screws or nails and cables or ropes. Now, you would like to make something out of these. But, you don't know how. Would it be simple or complicated, colorful or black-and-white, big or small, static or active? <br><br>Thank God, there are also some handy tools! Hammers, screwdrivers, pliers etc.. Not to mention, handbooks and instruction notes. Everything feels much feasible that way, don't you think? <br><br>This is how it works with our web technologies. Your plain materials are like the HTML elements. Your operating tools are the JS scripts. And... guess what! You've got a huge amount of styling options to transmute this into an amazing work of art! That's obviously CSS. </p>
+        <h2>What Comes Next</h2>
+        <p>Supposing that you have completed your creation... you found it quite easy to accomplish, so you decided to make plenty of them and run a profitable business. Good for you, great idea! <br><br>I have to inform you that you are going to need an accountant. In order to be organized, not to get into trouble, but also to have access to important information at anytime, he will keep files of your purchases, sales etc. safe.<br><br>Ta-da! Let me introduce you to your accountant, Mr Server! This program running on a computer, keeps and serves all the data needed. PHP helps to communicate with the server. It's just like the accountant's mobile device. Last but not least, use MySQL to get access to the accountant's bookcase! </p>
       </div>
       <div class="col-md-6">
         <img src="img/server.png" class="big-image" alt="A business man keeping files on several computer servers">
@@ -99,3 +99,6 @@ require 'includes/header.php';
   </div>
 
   <?php require 'includes/footer.php'; ?>
+
+</body>
+</html>

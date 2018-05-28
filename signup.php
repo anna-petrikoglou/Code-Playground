@@ -19,6 +19,23 @@ if (isset($_SESSION['u_id'])) {
     </div>
     <div class="container">
       <form class="form-horizontal" action="system/signup.php" method="post">
+        <div class="form-group warnings">
+          <?php
+            if(isset($_GET['signup']) and $_GET['signup'] == 'inadequate_input_length') {
+              echo '<span id="warning4" class="blink">Inadequate input length!</span>';
+            } elseif(isset($_GET['signup']) and $_GET['signup'] == 'invalid_first_name') {
+              echo '<span id="warning5" class="blink">Invalid first name!</span>';
+            } elseif(isset($_GET['signup']) and $_GET['signup'] == 'invalid_last_name') {
+              echo '<span id="warning6" class="blink">Invalid last name!</span>';
+            } elseif(isset($_GET['signup']) and $_GET['signup'] == 'invalid_email_address') {
+              echo '<span id="warning7" class="blink">Invalid e-mail address!</span>';
+            } elseif(isset($_GET['signup']) and $_GET['signup'] == 'already_used_username_or_email') {
+              echo '<span id="warning8" class="blink">Username or e-mail already used!</span>';
+            } elseif(isset($_GET['signup']) and $_GET['signup'] == 'not_matching_passwords') {
+              echo '<span id="warning9" class="blink">Two passwords do not match!</span>';
+            }
+          ?>
+        </div>
         <div class="form-group">
           <label class="control-label col-sm-3" for="first-name">First Name:</label>
           <div class="col-sm-6">
@@ -58,9 +75,9 @@ if (isset($_SESSION['u_id'])) {
         <div class="form-group">
           <div class="col-sm-offset-3 col-sm-9">
             <p>Already have an account? <a href="login.php" class="basic-color">Login</a>.</p>
-            <div class="checkbox">
+            <!--<div class="checkbox">
               <label><input type="checkbox" name="remember"> Remember me</label>
-            </div>
+            </div>-->
           </div>
         </div>
         <div class="form-group">
@@ -78,3 +95,6 @@ if (isset($_SESSION['u_id'])) {
   </div>-->
 
   <?php require 'includes/footer.php'; ?>
+
+</body>
+</html>

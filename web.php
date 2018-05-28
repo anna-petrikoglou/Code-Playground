@@ -1,9 +1,14 @@
 <?php
 
+require 'system/database.php';
 require 'system/settings.php';
 require 'includes/head.php';
 require 'includes/nav.php';
 
+$html = '<h1>Press "Ctrl + Shift + i"!</h1>';
+$css = 'h1 {color: #62c9ba;}';
+$javascript = 'console.log("Welcome computer ninja!");';
+$project_name = 'Untitled';
 
 if (isset($_GET['project_id']) && isset($_SESSION['u_id'])) {
   $sql = "SELECT * FROM projects WHERE project_id = '".$_GET['project_id']."' && user_id = '".$_SESSION['u_id']."'";
@@ -12,13 +17,13 @@ if (isset($_GET['project_id']) && isset($_SESSION['u_id'])) {
 
   if ($resultCheck > 0) {
     $row = mysqli_fetch_assoc($result);
+
+    $html = $row['project_html'];
+    $css = $row['project_css'];
+    $javascript = $row['project_javascript'];
+    $project_name = $row['project_name'];
   }
-} else {
-  $html = '<h1>Press "Ctrl + Shift + i"!</h1>';
-  $css = 'h1 {color: #62c9ba;}';
-  $javascript = 'console.log("Welcome computer ninja!");';
-  $project_name = 'Untitled';
-  }
+}
 
 ?>
 
@@ -38,7 +43,7 @@ if (isset($_GET['project_id']) && isset($_SESSION['u_id'])) {
           if (isset($_SESSION['u_id'])) {
             echo '<div class="row"><div class="form-group" id="project-title">
                   <label class="control-label basic-color" for="project-name">Title:</label>
-                  <div><input type="text" autocomplete="project-name" class="form-control" id="project-name" placeholder="Name this project" name="project-name" required maxlength="100">
+                  <div><input type="text" autocomplete="project-name" class="form-control" id="project-name" value="'.$project_name.'" placeholder="Name this project" name="project-name" required maxlength="100">
                   </div></div><div><input type="hidden" id="project-id" name="project-id" value="<?php echo htmlspecialchars($row->project_id); ?>"></div></div>';
           }
         ?>
@@ -66,8 +71,8 @@ if (isset($_GET['project_id']) && isset($_SESSION['u_id'])) {
       </div>
     </form>
     <div class="row">
-      <div id="preview" class="col-md-12">
-        <h2>Result</h2>
+      <div class="col-md-12 preview">
+        <h2>Output</h2>
         <iframe class="form-control iframe-code" name="iframe-result"></iframe>
       </div>
     </div>
@@ -79,6 +84,9 @@ if (isset($_GET['project_id']) && isset($_SESSION['u_id'])) {
     </div>
   </div>
 
+  <?php require 'includes/footer.php'; ?>
+
   <script src="assets/web.js" type="text/javascript"></script>
 
-  <?php require 'includes/footer.php'; ?>
+</body>
+</html>

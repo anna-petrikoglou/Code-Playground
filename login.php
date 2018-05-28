@@ -12,13 +12,24 @@ if (isset($_SESSION['u_id'])) {
 ?>
 
 <main>
-  <div class="container">
+  <div id="loginpage" class="container">
       <div class="col-md-12 intro">
         <h1>Welcome back</h1>
         <h4></h4>
       </div>
       <div class="container">
         <form class="form-horizontal" action="system/login.php" method="post">
+          <div class="form-group warnings">
+            <?php
+              if(isset($_GET['login']) and $_GET['login'] == 'username_and_password_required') {
+                echo '<span id="warning1" class="blink">Username and password required!</span>';
+              } elseif(isset($_GET['login']) and $_GET['login'] == 'not_existing_user') {
+                echo '<span id="warning2" class="blink">User not found!</span>';
+              } elseif(isset($_GET['login']) and $_GET['login'] == 'invalid_password') {
+                echo '<span id="warning3" class="blink">Invalid password!</span>';
+              }
+            ?>
+          </div>
           <div class="form-group">
             <label class="control-label col-sm-3" for="identification">Username:</label>
             <div class="col-sm-6">
@@ -34,9 +45,9 @@ if (isset($_SESSION['u_id'])) {
           <div class="form-group">
             <div class="col-sm-offset-3 col-sm-9">
               <p>Need an account? Sign up <a href="signup.php" class="basic-color">here</a>!</p>
-              <div class="checkbox">
+              <!--<div class="checkbox">
                 <label><input type="checkbox" name="remember"> Remember me</label>
-              </div>
+              </div>-->
             </div>
           </div>
           <div class="form-group">
@@ -50,3 +61,6 @@ if (isset($_SESSION['u_id'])) {
   </div>
 
   <?php require 'includes/footer.php'; ?>
+
+</body>
+</html>

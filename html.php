@@ -38,8 +38,8 @@ $html = '<!DOCTYPE html>
       </div>
     </form>
     <div class="row">
-      <div id="preview" class="col-md-12">
-        <h2>Result</h2>
+      <div class="col-md-12 preview">
+        <h2>Output</h2>
         <iframe class="form-control iframe-code" name="iframe-result"></iframe>
       </div>
     </div>
@@ -49,6 +49,9 @@ $html = '<!DOCTYPE html>
     </div>
   </div>
 
+  <?php require 'includes/footer.php'; ?>
+
   <script src="assets/web.js" type="text/javascript"></script>
 
-  <?php require 'includes/footer.php'; ?>
+</body>
+</html>

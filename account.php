@@ -12,6 +12,9 @@ require 'includes/nav.php';
       <h1>My account</h1>
     </div>
     <p>Logged in!</p>
-</div>
+  </div>
 
-<?php require 'includes/footer.php'; ?>
+  <?php require 'includes/footer.php'; ?>
+
+</body>
+</html>
