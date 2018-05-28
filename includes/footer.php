@@ -4,7 +4,7 @@
     <div class="col-md-3">
       <h4>Code Playground</h4>
       <a href="index.php" class="footer-info">Home</a>
-      <a href="#" class="footer-info">About</a>
+      <a href="about.php" class="footer-info">About</a>
       <a href="#" class="footer-info">Help</a>
     </div>
     <div class="col-md-3">
@@ -27,5 +27,3 @@
   <div class="separator"></div>
   <h6 class="copyright">Copyright © 2018 Code Playground</h6>
 </footer>
-</body>
-</html>
