@@ -31,7 +31,7 @@ if (isset($_GET['project_id']) && isset($_SESSION['u_id'])) {
 
 ?>
 
-<main>
+<main class="playground-general">
   <div class="container practice-area">
     <div class="row intro">
       <h1>Let's practice</h1>
@@ -54,11 +54,11 @@ if (isset($_GET['project_id']) && isset($_SESSION['u_id'])) {
       </div>
       <div class="row">
         <div id="htmleditor" class="col-md-4">
-          <h2>HTML</h2>
+          <h2>HyperText Markup Language</h2>
           <textarea class="form-control textarea-code" name="html" rows="18" autofocus><?php echo htmlspecialchars($html); ?></textarea>
         </div>
         <div id="csseditor" class="col-md-4">
-          <h2>CSS</h2>
+          <h2>Cascading Style Sheets</h2>
           <textarea class="form-control textarea-code" name="css" rows="18"><?php echo htmlspecialchars($css); ?></textarea>
         </div>
         <div id="jseditor" class="col-md-4">

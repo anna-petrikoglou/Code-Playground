@@ -22,17 +22,17 @@ if (isset($_SESSION['u_id'])) {
         <div class="form-group warnings">
           <?php
             if(isset($_GET['signup']) and $_GET['signup'] == 'inadequate_input_length') {
-              echo '<span id="warning4" class="blink">Inadequate input length!</span>';
+              echo '<span id="warning4" class="blink">Inadequate input length</span>';
             } elseif(isset($_GET['signup']) and $_GET['signup'] == 'invalid_first_name') {
-              echo '<span id="warning5" class="blink">Invalid first name!</span>';
+              echo '<span id="warning5" class="blink">Invalid first name</span>';
             } elseif(isset($_GET['signup']) and $_GET['signup'] == 'invalid_last_name') {
-              echo '<span id="warning6" class="blink">Invalid last name!</span>';
+              echo '<span id="warning6" class="blink">Invalid last name</span>';
             } elseif(isset($_GET['signup']) and $_GET['signup'] == 'invalid_email_address') {
-              echo '<span id="warning7" class="blink">Invalid e-mail address!</span>';
+              echo '<span id="warning7" class="blink">Invalid e-mail address</span>';
             } elseif(isset($_GET['signup']) and $_GET['signup'] == 'already_used_username_or_email') {
-              echo '<span id="warning8" class="blink">Username or e-mail already used!</span>';
+              echo '<span id="warning8" class="blink">Existing user</span>';
             } elseif(isset($_GET['signup']) and $_GET['signup'] == 'not_matching_passwords') {
-              echo '<span id="warning9" class="blink">Two passwords do not match!</span>';
+              echo '<span id="warning9" class="blink">Passwords do not match</span>';
             }
           ?>
         </div>

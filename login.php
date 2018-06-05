@@ -22,11 +22,11 @@ if (isset($_SESSION['u_id'])) {
           <div class="form-group warnings">
             <?php
               if(isset($_GET['login']) and $_GET['login'] == 'username_and_password_required') {
-                echo '<span id="warning1" class="blink">Username and password required!</span>';
+                echo '<span id="warning1" class="blink">Admission required</span>';
               } elseif(isset($_GET['login']) and $_GET['login'] == 'not_existing_user') {
-                echo '<span id="warning2" class="blink">User not found!</span>';
+                echo '<span id="warning2" class="blink">User not found</span>';
               } elseif(isset($_GET['login']) and $_GET['login'] == 'invalid_password') {
-                echo '<span id="warning3" class="blink">Invalid password!</span>';
+                echo '<span id="warning3" class="blink">Invalid password</span>';
               }
             ?>
           </div>

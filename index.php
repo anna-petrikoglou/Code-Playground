@@ -51,7 +51,7 @@ require 'includes/header.php';
         <img class="course-image" src="img/screwdriver.png" alt="Screwdriver" height="200" width="200">
         <h1>JavaScript</h1>
         <h6>or ECMAScript</h6>
-        <p class="information">One of the most popular, object-oriented, programming languages​​. Predominantly used for designing pages on the internet. JS includes a set of commands, that provide access to the document and allow interaction, changes and browsing among respective documents.</p>
+        <p class="information">One of the most popular, object-oriented, programming languages​​. Predominantly used for manipulating a page's behaviour. JS includes a set of commands, that provide access to the document and allow interaction, changes and browsing among respective documents.</p>
         <p><a class="btn btn-warning" href="web.php">Practice <i class="fa fa-arrow-right"></i></a></p>
       </div>
     </div>
@@ -86,7 +86,7 @@ require 'includes/header.php';
         <h1>PHP</h1>
         <h6>Hypertext Preprocessor</h6>
         <p class="information">A scripting language, which runs on a web server. Data are interpreted and then served to the browser. A powerful tool for making dynamic and interactive web pages.</p>
-        <p><a class="btn btn-danger" href="#">Practice <i class="fa fa-arrow-right"></i></a></p>
+        <p><a class="btn btn-danger" href="php.php">Practice <i class="fa fa-arrow-right"></i></a></p>
       </div>
       <div class="col-md-6 course">
         <img class="course-image" src="img/database.png" alt="Database icon" height="200" width="200">

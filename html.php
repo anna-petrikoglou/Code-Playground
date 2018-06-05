@@ -19,7 +19,7 @@ $html = '<!DOCTYPE html>
 
 ?>
 
-<main>
+<main class="playground-general">
   <div class="container practice-area">
     <div class="row intro">
       <h1>Let's practice</h1>
@@ -32,7 +32,7 @@ $html = '<!DOCTYPE html>
       </div>
       <div class="row">
         <div id="htmleditor" class="col-md-12">
-          <h2>HTML</h2>
+          <h2>HyperText Markup Language</h2>
           <textarea class="form-control textarea-code" name="html" rows="18" autofocus><?php echo htmlspecialchars($html); ?></textarea>
         </div>
       </div>
