@@ -33,12 +33,22 @@ body {
   padding: 10px;
 }
 
+.white-area {
+  background-color: #fff;
+  height: 150px;
+  width: 100%;
+}
+
 .in-the-middle {
   width: 100%;
   height: 600px;
-  border-top: 400px solid #fff;
+  border-top: 300px solid #f0f0f0;
   background-color: #62c9ba;
   position: fixed;
+}
+
+.all-articles {
+  padding-top: 50px;
 }
 
 .article {
