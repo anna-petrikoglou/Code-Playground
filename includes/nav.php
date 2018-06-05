@@ -27,7 +27,7 @@
           if (isset($_SESSION['u_id'])) {
             //Use this same isset() function to change any content on any page, when a user is logged in.
             //echo "You are logged in!";
-            echo '<li><a href="account.php">My Account</a></li>
+            echo '<li><a href="settings.php">My Account</a></li>
                   <li><a href="system/logout.php">Logout</a></li>';
           } else {
             echo '<li><a href="signup.php">Sign Up</a></li>
