@@ -13,9 +13,11 @@ require 'includes/nav.php';
       <h4>Your very first steps as a web developer!</h4>
     </div>
   </div>
+  <div class="white-area">
+  </div>
   <div class="in-the-middle">
   </div>
-  <div class="container">
+  <div class="container all-articles">
     <div class="row">
       <div class="col-md-4">
         <div class="article article-black">
