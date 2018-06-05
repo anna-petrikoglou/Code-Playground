@@ -16,6 +16,8 @@ $source = $_POST['php'];
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <?php echo eval($source.";"); ?>
+    <code>
+      <?php echo eval($source.";"); ?>
+    </code>
   </body>
 </html>
