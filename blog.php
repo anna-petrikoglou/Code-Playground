@@ -14,10 +14,22 @@ require 'includes/nav.php';
     </div>
   </div>
   <div class="white-area">
+    <div class="container">
+      <div class="col-md-3">
+        <div class="color-box-black"></div><h2> HTML</h2>
+      </div>
+      <div class="col-md-6">
+          <div class="color-box color-box-yellow"></div><div class="color-box color-box-green"></div><div class="color-box color-box-orange"></div><h2> CSS</h2>
+        
+      </div>
+      <div class="col-md-3">
+        <div class="color-box-white"></div><h2> JS</h2>
+      </div>
+    </div>
   </div>
   <div class="in-the-middle">
   </div>
-  <div class="container all-articles">
+  <div class="container all-article-section">
     <div class="row">
       <div class="col-md-4">
         <div class="article article-black">
@@ -54,15 +66,15 @@ require 'includes/nav.php';
         </div>
       </div>
       <div class="col-md-4">
-        <div class="article article-grey">
+        <div class="article article-white">
           <a href="#"><h3>A CSS Statement</h3></a>
           <img src="img/articles/css-selectors.png" alt="CSS selectors">
           <p>See the format of a rule, with accurate and concise diagrams and templates. Distinguish selectors and check their validity, from specific to general.</p>
           <span class="glyphicon glyphicon-calendar"></span><span> Sat, 5 May</span><span class="read-article"><a href="#" class="basic-color">Read This</a></span>
         </div>
       </div>
-      <div class="col-md-4" id="last-article">
-        <div class="article article-black">
+      <div class="col-md-4">
+        <div class="article article-black" id="last-article">
           <a href="#"><h3>HTML Structure</h3></a>
           <img src="img/articles/html.png" alt="HTML basic structure">
           <p>Learn about the most widely used HTML tags, the basic structure of an HTML document and how to validate it according to the W3C standards.</p>

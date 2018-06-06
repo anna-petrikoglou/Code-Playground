@@ -15,9 +15,9 @@ if (isset($_SESSION['u_id'])) {
   <div id="signuppage" class="container">
     <div class="row intro">
       <h1>Create account</h1>
-      <h4>Gain access to more features, additional functionalities and powerful tools!</h4>
+      <h4><!--Gain access to more features, additional functionalities and powerful tools!--></h4>
     </div>
-    <div class="container">
+    <div class="container" id="signup-form">
       <form class="form-horizontal" action="system/signup.php" method="post">
         <div class="form-group warnings">
           <?php
@@ -37,57 +37,42 @@ if (isset($_SESSION['u_id'])) {
           ?>
         </div>
         <div class="form-group">
-          <label class="control-label col-sm-3" for="first-name">First Name:</label>
-          <div class="col-sm-6">
-            <input type="text" autocomplete="first-name" class="form-control" id="first-name" placeholder="Enter your first name" name="first-name" required maxlength="50" value="<?php if (isset($_SESSION['submission'])) { echo htmlspecialchars($_SESSION['submission']['first-name']); } ?>" autofocus>
-          </div>
+          <label for="first-name">First Name:</label>
+          <input type="text" autocomplete="first-name" class="form-control" id="first-name" placeholder="Name" name="first-name" required maxlength="50" value="<?php if (isset($_SESSION['submission'])) { echo htmlspecialchars($_SESSION['submission']['first-name']); } ?>" autofocus>
         </div>
         <div class="form-group">
-          <label class="control-label col-sm-3" for="last-name">Last Name:</label>
-          <div class="col-sm-6">
-            <input type="text" autocomplete="last-name" class="form-control" id="last-name" placeholder="Enter your last name" name="last-name" required maxlength="70" value="<?php if (isset($_SESSION['submission'])) { echo htmlspecialchars($_SESSION['submission']['last-name']); } ?>">
-          </div>
+          <label for="last-name">Last Name:</label>
+          <input type="text" autocomplete="last-name" class="form-control" id="last-name" placeholder="Surname" name="last-name" required maxlength="70" value="<?php if (isset($_SESSION['submission'])) { echo htmlspecialchars($_SESSION['submission']['last-name']); } ?>">
         </div>
         <div class="form-group">
-          <label class="control-label col-sm-3" for="email">Email:</label>
-          <div class="col-sm-6">
-            <input type="text" autocomplete="email" class="form-control" id="email" placeholder="Enter your email" name="email" required maxlength="100" value="<?php if (isset($_SESSION['submission'])) { echo htmlspecialchars($_SESSION['submission']['email']); } ?>">
-          </div>
+          <label for="email">Email:</label>
+          <input type="text" autocomplete="email" class="form-control" id="email" placeholder="Email" name="email" required maxlength="100" value="<?php if (isset($_SESSION['submission'])) { echo htmlspecialchars($_SESSION['submission']['email']); } ?>">
         </div>
         <div class="form-group">
-          <label class="control-label col-sm-3" for="username">Username:</label>
-          <div class="col-sm-6">
-            <input type="text" autocomplete="username" class="form-control" id="username" placeholder="Type your username" name="username" required maxlength="100" value="<?php if (isset($_SESSION['submission'])) { echo htmlspecialchars($_SESSION['submission']['username']); } ?>">
-          </div>
+          <label for="username">Username:</label>
+          <input type="text" autocomplete="username" class="form-control" id="username" placeholder="Username" name="username" required maxlength="100" value="<?php if (isset($_SESSION['submission'])) { echo htmlspecialchars($_SESSION['submission']['username']); } ?>">
         </div>
         <div class="form-group">
-          <label class="control-label col-sm-3" for="password">Password:</label>
-          <div class="col-sm-6">
-            <input type="password" autocomplete="password" class="form-control" id="password" placeholder="Type your password" name="password" required maxlength="256">
-          </div>
+          <label for="password">Password:</label>
+          <input type="password" autocomplete="password" class="form-control" id="password" placeholder="Password" name="password" required maxlength="256">
         </div>
         <div class="form-group">
-          <label class="control-label col-sm-3" for="confirm-password">Confirmation:</label>
-          <div class="col-sm-6">
-            <input type="password" autocomplete="confirm-password" class="form-control" id="confirm-password" placeholder="Confirm your password" name="confirm-password" required maxlength="256">
-          </div>
+          <label for="confirm-password">Confirmation:</label>
+          <input type="password" autocomplete="confirm-password" class="form-control" id="confirm-password" placeholder="Password" name="confirm-password" required maxlength="256">
         </div>
         <div class="form-group">
-          <div class="col-sm-offset-3 col-sm-9">
-            <p>Already have an account? <a href="login.php" class="basic-color">Login</a>.</p>
-            <!--<div class="checkbox">
-              <label><input type="checkbox" name="remember"> Remember me</label>
-            </div>-->
-          </div>
+          <p>Already have an account? <a href="login.php" class="basic-color">Login</a>.</p>
+          <!--<div class="checkbox">
+            <label><input type="checkbox" name="remember"> Remember me</label>
+          </div>-->
         </div>
         <div class="form-group">
-          <div class="col-sm-offset-3 col-sm-9">
-            <button type="submit" class="btn" name="submit">Submit</button>
-            <a href="login.php" class="btn btn-default cancel">Cancel</a>
-          </div>
+          <button type="submit" class="btn" name="submit">Submit</button>
+          <a href="login.php" class="btn btn-default cancel">Cancel</a>
         </div>
       </form>
     </div>
+    <h6><span class="basic-color">Note!</span> Your personal information is safe. We do not publish or share any kind of data.</h6>
   </div>
 
   <!-- Image

@@ -24,7 +24,7 @@ require 'includes/nav.php';
         <a href="system/logout.php" class="list-group-item">Logout</a>
       </div>
     </div>
-    <div class="col-md-1">
+    <div class="col-md-1 dashes-separator">
     </div>
     <div class="col-md-6">
       <form method="post" class="dashboard-info">
@@ -55,7 +55,7 @@ require 'includes/nav.php';
         <button type="submit" class="btn" name="update">Update</button>
       </form>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-3 box-aside">
     </div>
   </div>
 </div>

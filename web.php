@@ -12,7 +12,7 @@ $project_name = 'Untitled';
 $project_id = 0;
 
 if (isset($_GET['project_id']) && isset($_SESSION['u_id'])) {
-  $sql = "SELECT * FROM projects WHERE project_id = '".$_GET['project_id']."' && user_id = '".$_SESSION['u_id']."'";
+  $sql = "SELECT * FROM projects WHERE project_id = '".$_GET['project_id']."' AND user_id = '".$_SESSION['u_id']."'";
   $result = mysqli_query($connection, $sql);
   $resultCheck = mysqli_num_rows($result);
 
@@ -24,8 +24,6 @@ if (isset($_GET['project_id']) && isset($_SESSION['u_id'])) {
     $javascript = $row['project_javascript'];
     $project_name = $row['project_name'];
     $project_id = $row['project_id'];
-    header("Location: ./web.php?project_id=$project_id");
-    exit();
   }
 }
 
@@ -87,6 +85,10 @@ if (isset($_GET['project_id']) && isset($_SESSION['u_id'])) {
       </div>
     </div>
   </div>
+  <!--<div class="in-the-background">
+    <div>
+    </div>
+  </div>-->
 
   <?php require 'includes/footer.php'; ?>
 

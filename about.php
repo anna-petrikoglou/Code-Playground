@@ -89,7 +89,7 @@ require 'includes/nav.php';
       </div>
       <div class="col-md-6 story">
         <p>We aim to provide efficient services and consistent access to up to date material. For these reasons, we maintain, debug and renew the website on a regular basis. However, there may still be a lot of malfunctions. We highly recommend that you use the Google Chrome or the Mozilla Firefox browser.</p><p>Security scores do not denote vulnerabilities, regarding sensitive data. We would like to assure you that any personal information we store is highly protected and safe. In order to report issues while running the app, please complete the contact form provided below or click <a href="https://docs.google.com/forms/d/e/1FAIpQLScKWPsrGPX-fWZ3qgZBKEKuW0FMkb4vWP9WZcjwZufBwmdx1Q/viewform?usp=sf_link" target="_blank" class="basic-color">here</a>.</p>
-        <p><span class="basic-color">Secret! </span>As a matter if fact, we have never taken these tests... Haha! The following scores simply represent our perception and our estimations on the satisfaction level of each aspect.</p>
+        <p><span class="basic-color">Secret! </span>As a matter of fact, we have never taken these tests... (Oops!) The following scores simply represent our perception and our estimations on the satisfaction level of each aspect.</p>
         <!--<img src="img/analytics.png" alt="Bars of analysis and arrows.">-->
       </div>
       <div class="col-md-6">
