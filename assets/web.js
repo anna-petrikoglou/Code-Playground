@@ -33,10 +33,10 @@ window.onload = function () {
     let jqxhr = $.post("system/save.php", $("#webform").serialize());
 
     jqxhr.done(function(data) {
-    alert("Project saved!");
-    if ($('#project-id').val() === "") {
-    window.location.href = '/web.php?project_id=' + data;
-  }
+      alert("Project saved!");
+      if ($('#project-id').val() !== $.trim(data)) {
+      window.location.href = './web.php?project_id=' + data;
+      }
     })
     jqxhr.fail(function() {
       alert("Error occurred. Project not saved!");
