@@ -5,6 +5,11 @@ require 'system/settings.php';
 require 'includes/head.php';
 require 'includes/nav.php';
 
+if (!isset($_SESSION['u_id'])) {
+  header("Location: web.php");
+  exit();
+}
+
 ?>
 
 <main>
