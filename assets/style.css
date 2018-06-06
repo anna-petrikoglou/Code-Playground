@@ -12,6 +12,36 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+#colorPicker, #calculator {
+  width: 50%;
+  height: 300px;
+  padding: 20px;
+  position: relative;
+  left: 25%;
+}
+
+#colorPicker:focus, #colorPicker:hover {
+  outline: none;
+  cursor: pointer;
+}
+
+.tool-label {
+  display: block;
+  font-family: 'Amatic SC', cursive;
+  font-size: 50px;
+  font-weight: normal;
+  text-align: center;
+  color: #333;
+  padding-bottom: 10px;
+}
+
+.tool-p {
+  text-align: center;
+  padding-bottom: 10px;
+  width: 50%;
+  margin: 5px auto;
+}
+
 .warnings {
   text-align: center;
   color: #62c9ba;
@@ -44,6 +74,10 @@ body {
   margin: 0;
   display: inline-block;
   vertical-align: middle;
+}
+
+.active-tab {
+  border: 5px dashed #62c9ba;
 }
 
 .color-box-black {
@@ -572,16 +606,34 @@ main {
 */
 
 .dashes-separator {
+  width: 15%;
+}
+
+.dashes-separator div {
   width: 90px;
   height: 900px;
   background-image: url("../img/vertical-dashes.png");
   background-repeat: repeat-y;
+  float: right;
 }
 
 .box-aside {
-  height: 900px;
-  background-color: #62c9ba;
+  background-color: #f1f1f1;
   box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
+  border-radius: 15px;
+  border-left: 30px solid #62c9ba;
+  border-right: 30px solid #62c9ba;
+}
+
+.box-aside-1 {
+  height: 500px;
+  margin-bottom: 25px;
+}
+
+.box-aside-2 {
+  height: 350px;
+  margin-top: 50px;
+  margin-bottom: 150px;
 }
 
 .playground-nav {
@@ -642,6 +694,7 @@ main {
   font-size: 40px;
   color: #62c9ba;
   text-transform: uppercase;
+  text-align: left;
 }
 
 .dashboard-info h2:first-of-type {
@@ -754,6 +807,10 @@ main {
     display: none;
   }
 
+  .dashboard-info h2 {
+    text-align: center;
+  }
+
 }
 
 @media screen and (min-width: 500px) and (max-width: 991px) {
@@ -780,6 +837,10 @@ main {
 
   .dashes-separator {
     display: none;
+  }
+
+  .dashboard-info h2 {
+    text-align: center;
   }
 
 }
