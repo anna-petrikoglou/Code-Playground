@@ -19,7 +19,7 @@ if (isset($_SESSION['u_id'])) {
     </div>
     <div class="container" id="login-form">
       <form class="form-horizontal" action="system/login.php" method="post">
-        <div class="form-group warnings">
+        <div class="warnings">
           <?php
             if(isset($_GET['login']) and $_GET['login'] == 'username_and_password_required') {
               echo '<span id="warning1" class="blink">Admission required</span>';
