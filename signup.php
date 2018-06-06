@@ -19,7 +19,7 @@ if (isset($_SESSION['u_id'])) {
     </div>
     <div class="container" id="signup-form">
       <form class="form-horizontal" action="system/signup.php" method="post">
-        <div class="form-group warnings">
+        <div class="warnings">
           <?php
             if(isset($_GET['signup']) and $_GET['signup'] == 'inadequate_input_length') {
               echo '<span id="warning4" class="blink">Inadequate input length</span>';
