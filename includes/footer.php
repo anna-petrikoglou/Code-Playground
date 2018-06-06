@@ -10,7 +10,7 @@
     <div class="col-md-3">
       <h4>Support</h4>
       <a href="blog.php" class="footer-info">Articles</a>
-      <a href="#" class="footer-info">Tools</a> <!--Color Picker-->
+      <a href="tools.php" class="footer-info">Tools</a> <!--Color Picker-->
     </div>
     <div class="col-md-3">
       <h4>Contact</h4>
