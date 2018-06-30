@@ -22,7 +22,7 @@ $html = '<!DOCTYPE html>
 <main class="playground-general">
   <div class="container practice-area">
     <div class="row intro">
-      <h1>Let's practice</h1>
+      <h1>Practice</h1>
     </div>
     <form id="webform" method="post" target="iframe-result" action="playground/html.php">
       <div class="button-options">

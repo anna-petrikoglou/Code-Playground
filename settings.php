@@ -13,10 +13,10 @@ if (!isset($_SESSION['u_id'])) {
 ?>
 
 <main>
-<div class="container practice-area">
-  <div class="row intro">
-    <h1>My account</h1>
-    <h4>You have successfully logged in.<br>Refresh your settings or get back to work!</h4>
+<div class="container account-area">
+  <div class="intro">
+    <h1>My Account</h1>
+    <h4>Refresh your settings or get back to work!</h4><h6>You are successfully logged in.</h6>
   </div>
   <div class="row">
     <!--<div class="col-md-2">
@@ -31,7 +31,7 @@ if (!isset($_SESSION['u_id'])) {
         <p>Check and edit your personal data.</p>
         <div class="form-group">
             <label for="first-name">First Name</label>
-            <input type="text" class="form-control" id="first-name" name="name" placeholder="Name" required maxlength="50" value="<?php echo $_SESSION['u_first_name']; ?>">
+            <input type="text" class="form-control" id="first-name" name="name" placeholder="Name" required maxlength="50" value="<?php echo $_SESSION['u_first_name']; ?>" autofocus>
         </div>
         <div class="form-group">
           <label for="last-name">Last Name</label>
@@ -65,6 +65,7 @@ if (!isset($_SESSION['u_id'])) {
       <div class="list-group">
         <a href="#" class="list-group-item">Go to</a>
         <a href="blog.php" class="list-group-item">Blog</a>
+        <a href="tools.php" class="list-group-item">Tools</a>
         <!--<a href="dashboard.php" class="list-group-item disabled">Dashboard</a>-->
         <a href="projects.php" class="list-group-item">Projects <span class="badge"></span></a>
         <a href="settings.php" class="list-group-item active-tab">Settings</a>

@@ -10,7 +10,7 @@ if (!isset($_SESSION['u_id'])) {
   exit();
 }
 
-$php = 'echo "You are learning really fast!";';
+$sql = 'SELECT * FROM users;';
 $project_name = 'Untitled';
 $project_id = 0;
 
@@ -22,7 +22,7 @@ if (isset($_GET['project_id']) && isset($_SESSION['u_id'])) {
   if ($resultCheck > 0) {
     $row = mysqli_fetch_assoc($result);
 
-    $php = $row['project_php'];
+    $mysql = $row['project_sql'];
     $project_name = $row['project_name'];
     $project_id = $row['project_id'];
   }
@@ -35,7 +35,7 @@ if (isset($_GET['project_id']) && isset($_SESSION['u_id'])) {
     <div class="row intro">
       <h1>Practice</h1>
     </div>
-    <form id="phpform" method="post" target="iframe-result" action="playground/php.php">
+    <form id="sqlform" method="post" target="iframe-result" action="playground/sql.php">
       <div class="button-options">
         <button type="button" name="action" value="here" id="run-code-button" class="btn"><i class="fa fa-play"></i> Run</button>
         <button type="button" name="action" value="there" id="new-page-preview-button" class="btn"><i class="fa fa-file"></i> Preview</button>
@@ -48,16 +48,16 @@ if (isset($_GET['project_id']) && isset($_SESSION['u_id'])) {
             <div>
               <input type="text" autocomplete="project-name" class="form-control" id="project-name" value="<?php echo htmlspecialchars($project_name) ?>" placeholder="Name this project" name="project-name" required maxlength="100">
             </div>
-          </div>
+        </div>
         <div>
           <input type="hidden" id="project-id" name="project-id" value="<?php echo $project_id; ?>">
           </div>
         </div>
       </div>
       <div class="row">
-        <div id="phpeditor" class="col-md-12">
-          <h2>Hypertext Preprocessor</h2>
-          <textarea class="form-control textarea-code" name="php" rows="18" autofocus><?php echo htmlspecialchars($php); ?></textarea>
+        <div id="sqleditor" class="col-md-12">
+          <h2>Structured Query Language</h2>
+          <textarea class="form-control textarea-code" name="mysql" rows="18" autofocus><?php echo htmlspecialchars($mysql); ?></textarea>
         </div>
       </div>
       <div class="col-md-12">
@@ -76,7 +76,7 @@ if (isset($_GET['project_id']) && isset($_SESSION['u_id'])) {
 
 <?php require 'includes/footer.php'; ?>
 
-<script src="assets/php.js" type="text/javascript"></script>
+<script src="assets/sql.js" type="text/javascript"></script>
 
 </body>
 </html>

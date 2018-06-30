@@ -5,6 +5,11 @@ require 'includes/head.php';
 require 'includes/nav.php';
 require 'includes/header.php';
 
+if (isset($_SESSION['u_id'])) {
+  header("Location: home.php");
+  exit();
+}
+
 ?>
 
 <main>
@@ -23,13 +28,7 @@ require 'includes/header.php';
     <div class="container">
         <div class="col-md-12 intro">
           <h1>Basics</h1>
-          <?php
-            if (isset($_SESSION['u_id'])) {
-              echo '<h4>Experiment with client-side technologies and build awesome stuff!</h4>';
-            } else {
-              echo '<h4>Experiment with client-side technologies and build awesome stuff! Need more? <a href="signup.php" class="basic-color">Sign up</a> for free.</h4>';
-            }
-          ?>
+          <h4>Experiment with client-side technologies and build awesome stuff! Need more? <a href="signup.php" class="basic-color">Sign up</a> for free.</h4>
         </div>
     </div>
     <div class="container">
@@ -71,13 +70,7 @@ require 'includes/header.php';
     <div class="container">
         <div class="col-md-12 intro">
           <h1>Premium</h1>
-          <?php
-            if (isset($_SESSION['u_id'])) {
-              echo '<h4>Work your magic with server-side technologies!</h4>';
-            } else {
-              echo '<h4><span class="basic-color">Admission required!</span> Work your magic with server-side technologies. <a href="signup.php" class="basic-color">Sign up</a> here.</h4>';
-            }
-          ?>
+          <h4><span class="basic-color">Admission required!</span> Work your magic with server-side technologies. <a href="signup.php" class="basic-color">Sign up</a> here.</h4>
         </div>
     </div>
     <div class="container">

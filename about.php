@@ -9,8 +9,8 @@ require 'includes/nav.php';
 <main>
   <div class="container" id="home-menu">
     <div class="row intro">
-      <h1>About</h1>
-      <h4>Let us introduce the code playground!<br>Anything you're gonna need is stated here.</h4>
+      <h1>Info</h1>
+      <h4>Let us introduce the code playground!</h4><h6>Anything you're gonna need to know is stated here.</h4>
     </div>
     <!--<p>A code map for the codeland!</p>-->
   </div>
@@ -51,9 +51,6 @@ require 'includes/nav.php';
           <h1>Services</h1>
         </div>
       </div>
-      <div class="col-md-6 about">
-        <img src="img/slide.png" alt="A chart with connected dots.">
-      </div>
       <div class="col-md-6">
         <div class="service-checkboxes">
           <div class="row service-checkbox">
@@ -77,6 +74,9 @@ require 'includes/nav.php';
             <p> Also, available in the greek language.</p>
           </div>
       </div>
+      </div>
+      <div class="col-md-6 about">
+        <img src="img/slide.png" alt="A chart with connected dots.">
       </div>
     </div>
   </div>
@@ -117,6 +117,7 @@ require 'includes/nav.php';
       <div class="col-md-6 story">
         <p>Here we go! You may have come across plenty of code playgrounds. Our goal is to</p>
         <p>Find useful articles and links to valiable resources. Experiment with various methods and styles. Discover cool tricks and techniques.</p>
+        <!-- Additional material | Blog -->
       </div>
     </div>
   </div>
