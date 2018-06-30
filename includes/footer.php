@@ -5,11 +5,11 @@
       <h4>Code Playground</h4>
       <a href="index.php" class="footer-info">Home</a>
       <a href="about.php" class="footer-info">About</a>
-      <a href="#" class="footer-info">Help</a>
+      <a href="help.php" class="footer-info">Help</a>
     </div>
     <div class="col-md-3">
       <h4>Support</h4>
-      <a href="blog.php" class="footer-info">Articles</a>
+      <a href="blog.php" class="footer-info">Blog</a>
       <a href="tools.php" class="footer-info">Tools</a> <!--Color Picker-->
     </div>
     <div class="col-md-3">
