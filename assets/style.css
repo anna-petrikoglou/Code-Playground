@@ -12,17 +12,42 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-#colorPicker, #calculator {
-  width: 50%;
-  height: 300px;
+#colorPicker input {
+  width: 100%;
   padding: 20px;
-  position: relative;
-  left: 25%;
 }
 
-#colorPicker:focus, #colorPicker:hover {
+#calculator form {
+  padding: 5px;
+  text-align: center;
+}
+
+#calculator input[type="textfield"] {
+  text-align: right;
+}
+
+#colorPicker input, #calculator form {
+  height: 300px;
+}
+
+#colorPicker, #calculator {
+  width: 40%;
+  margin: 0 auto;
+}
+
+#colorPicker input:focus, #colorPicker input:hover {
   outline: none;
   cursor: pointer;
+}
+
+#calculator p {
+  padding: 2px 0;
+  margin: 0 auto;
+}
+
+.dotted-top {
+  border-top: 10px dotted #62c9ba;
+  padding-top: 30px;
 }
 
 .tool-label {
@@ -38,7 +63,7 @@ body {
 .tool-p {
   text-align: center;
   padding-bottom: 10px;
-  width: 50%;
+  width: 40%;
   margin: 5px auto;
 }
 
@@ -55,12 +80,10 @@ body {
   /* animation: blinker 1s linear infinite; */
   text-decoration: blink;
 	-webkit-animation-name: blink;
-	-webkit-animation-duration: 0.6s;
+	-webkit-animation-duration: 1s;
 	-webkit-animation-iteration-count:infinite;
 	-webkit-animation-timing-function:ease-in-out;
 	-webkit-animation-direction: alternate;
-  border: 2px dashed #62c9ba;
-  padding: 10px;
 }
 
 @-webkit-keyframes blink {
@@ -92,7 +115,7 @@ body {
   background-color: #eeed00;
 }
 
-.color-box-green {
+.color-box-grey {
   background-color: #d3d3d3;
 }
 
@@ -120,13 +143,13 @@ body {
   margin: auto;
   position: absolute;
   top: 20.5%;
-  transform: translate(10%, 10%);
+  transform: translate(10%, 50%);
 }
 
 .in-the-middle {
   width: 100%;
   height: 500px;
-  border-top: 225px solid #f0f0f0;
+  border-top: 215px solid #f0f0f0;
   background-color: #62c9ba;
   position: fixed;
 }
@@ -285,6 +308,9 @@ main {
   -webkit-transform: scale(0.8);
   -ms-transform: scale(0.8);
   transform: scale(0.8);
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  transition: 150ms;
 }
 
 .about {
@@ -321,6 +347,7 @@ main {
   -webkit-transform: rotateZ(-30deg);
   -ms-transform: rotateZ(-30deg);
   transform: rotateZ(-30deg);
+  transition: 200ms ease;
 }
 
 .presentation {
@@ -362,6 +389,15 @@ main {
   border-radius: 20px;
   display: inline-block;
 }
+
+/*
+#perform-bar-1a:hover, #perform-bar-2a:hover, #perform-bar-3a:hover, #perform-bar-4a:hover {
+  width: 100%;
+  transition: width 2s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+*/
 
 #perform-bar-1a {
   width: 62%;
@@ -437,6 +473,150 @@ main {
   padding-top: 10px;
 }
 
+.user-steps {
+  background: linear-gradient(to right, white, lightgrey);
+  text-align: center;
+  padding-top: 150px;
+  padding-bottom: 300px;
+}
+
+.user-steps p {
+  padding: 30px 0;
+  width: 50%;
+  margin: 0 auto;
+  /* vertical-align: middle; DOESN'T WORK */
+}
+
+.step-one, .step-three {
+  border-bottom: 10px solid #424242;
+  border-right: 10px solid #424242;
+  height: 150px;
+}
+
+.step-two {
+  border-top: 10px solid #424242;
+  border-right: 10px solid #424242;
+  height: 150px;
+}
+
+.step-four {
+  border-top: 10px solid #424242;
+  height: 150px;
+}
+
+#searchform {
+  height: 500px;
+  background-color: #f69454;
+}
+
+#search-google {
+  width: 40%;
+  margin: 0 auto;
+  padding-top: 200px;
+}
+
+#searchform label, #searchform i {
+  color: #fff;
+}
+
+#search-area{
+  width: 100%;
+  margin: 0 auto;
+}
+
+#search {
+  height: 50px;
+  border-radius: 40px;
+  display: inline;
+  width: 80%;
+  border: 4px solid #d3d3d3;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: searchfield-cancel-button;
+}
+
+.fa-search {
+  font-size: 50px;
+  vertical-align: middle;
+  padding: 2%;
+}
+
+/*
+.user-options {
+  border: 10px double #fff;
+}*/
+
+.user-home-page {
+  height: 1400px;
+}
+
+.user-parts {
+  height: 700px;
+}
+
+.user-parts > div {
+  text-align: center;
+}
+
+.user-parts p {
+  width: 70%;
+  margin: 10px auto;
+}
+
+.user-parts a {
+  background-color: #62c9ba;
+  border-radius: 20px;
+  color: #fff;
+  padding: 6px 12px;
+  text-transform: capitalize;
+}
+
+.user-parts .dark {
+  background-color: #fff;
+  color: #62c9ba;
+}
+
+.user-parts .light {
+  color: #fff;
+}
+
+#project-part {
+  background-color: #d3d3d3;
+}
+
+#project-part:hover {
+  background: radial-gradient(#fff, #d3d3d3);
+}
+
+#blog-part {
+  background-color: #424242;
+}
+
+#blog-part:hover {
+  background: radial-gradient(#242424, #424242);
+}
+
+#tool-part {
+  background-color: #62c9ba;
+}
+
+#tool-part:hover {
+  background: radial-gradient(#3fb9a7, #62c9ba);
+}
+
+#template-part {
+  background-color: #fff;
+}
+
+#template-part:hover {
+  background: radial-gradient(#e7e7e7, #fff);
+}
+
+#blog-part h1, #tool-part h1 {
+  color: #fff;
+}
+
 .basic-color {
   color: #62c9ba;
 }
@@ -495,8 +675,9 @@ main {
   background-color: #f0f0f0;
 }
 
-.practice-area {
+.practice-area, .account-area, .research-area {
   width: 90%;
+  margin: 0 auto;
 }
 
 .button-options {
@@ -535,7 +716,7 @@ main {
   */
 }
 
-.textarea-code:focus, #project-title input:focus {
+.textarea-code:focus, #project-title input:focus, #signuppage input:focus, #loginpage input:focus, .account-area input:focus {
   border: 3px dashed #62c9ba;
   border-radius: 10px;
 }
@@ -770,6 +951,11 @@ main {
     height: auto;
   }
 
+  #colorPicker, #calculator {
+    width: 80%;
+    left: 10%;
+  }
+
   .article {
     width: 90%;
   }
@@ -780,6 +966,18 @@ main {
 
   .intro > h1, .presentation h1 {
     font-size: 65px;
+  }
+
+  .user-steps {
+    display: none;
+  }
+
+  .user-home-page {
+    height: auto;
+  }
+
+  #search-google {
+    width: 90%;
   }
 
   .service-checkboxes {
@@ -818,8 +1016,26 @@ main {
     padding: 0 12%;
   }
 
+  #colorPicker, #calculator {
+    width: 70%;
+    left: 15%;
+  }
+
   .list-group {
     max-width: 300px;
+  }
+
+  .user-steps {
+    display: none;
+  }
+
+  .user-home-page {
+    height: auto;
+  }
+
+  #search-google {
+    width: 80%;
+    margin: 0 auto;
   }
 
   #magnifier {
@@ -841,6 +1057,20 @@ main {
 
   .dashboard-info h2 {
     text-align: center;
+  }
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1424px) {
+
+  #colorPicker, #calculator {
+    width: 70%;
+    left: 15%;
+  }
+
+  #search-google {
+    width: 60%;
+    margin: 0 auto;
   }
 
 }
@@ -883,4 +1113,31 @@ font-family: 'Libre Barcode 39 Text', cursive; --barcode
 
 Colors
 #d9534f, #337ab7, #f0ad4e
+
+
+Input Validation:
+input:invalid ~ span:after {
+    content: '✖';
+    padding-left: 5px;
+    position: absolute:
+}
+
+input:valid ~ span:after {
+    content: '✓';
+    padding-left: 5px;
+    position: absolute:
+}
+
+
+Clear Search:
+$(function() {
+    // init plugin (with callback)
+    $('.search').clearSearch({
+    	callback: function() {
+      	console.log("search cleared");
+        }
+      });
+
+});
+
 */
