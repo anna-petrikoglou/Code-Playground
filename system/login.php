@@ -38,7 +38,7 @@ if (isset($_POST['submit'])) {
           $_SESSION['u_last_name'] = $row['user_last_name'];
           $_SESSION['u_email'] = $row['user_email'];
           $_SESSION['u_username'] = $row['user_username'];
-          header("Location: ../settings.php?login=success");
+          header("Location: ../home.php?login=success");
           exit();
         }
       }

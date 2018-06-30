@@ -37,7 +37,7 @@ if (isset($_POST['submit'])) {
     header("Location: ../signup.php?signup=invalid_last_name");
     exit();
   } elseif (strlen($password) < 4) {
-    header("Location: ../signup.php?signup=inadequate_input_length");
+    header("Location: ../signup.php?signup=inadequate_password_length");
     exit();
   } else {
     // Check if email is valid
