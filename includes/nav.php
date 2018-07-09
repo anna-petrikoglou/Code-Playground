@@ -6,7 +6,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.php">Code Playground</a>
+      <a class="navbar-brand" href="index.php">CodeTrip</a>
     </div>
     <div id="myNavbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -27,14 +27,15 @@
           if (isset($_SESSION['u_id'])) {
             //Use this same isset() function to change any content on any page, when a user is logged in.
             //echo "You are logged in!";
-            echo '<li><a href="settings.php">My Account</a></li>
+            echo '<li><a href="projects.php">Projects</a></li>
+                  <li><a href="account.php">Account</a></li>
                   <li><a href="system/logout.php">Logout</a></li>';
           } else {
             echo '<li><a href="signup.php">Sign Up</a></li>
                   <li><a href="login.php">Login</a></li>';
           }
           ?>
-          <li><a href="about.php">About</a></li>
+          <li><a href="about.php">Info</a></li>
       </ul>
     </div>
   </div>
