@@ -56,7 +56,7 @@ window.onload = function () {
     let jqxhr = $.post("system/save.php", $("#sqlform").serialize());
 
     jqxhr.done(function(data) {
-      alert("Project saved!");
+      //alert("Project saved!");
       if ($('#project-id').val() !== $.trim(data)) {
       window.location.href = './sql.php?project_id=' + data;
       }
