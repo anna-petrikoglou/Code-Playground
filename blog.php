@@ -10,7 +10,7 @@ require 'includes/nav.php';
   <div class="container" id="home-menu">
     <div class="row intro">
       <h1>Blog</h1>
-      <h4>Becoming a web developer...</h4><h6>Articles, links, notes & step-by-step guides!</h6>
+      <h4><!--Becoming a web developer...--><i class="fa fa-info-circle"></i></h4><h6>Articles, links, notes & step-by-step guides!</h6>
     </div>
   </div>
   <div class="white-area">
@@ -35,7 +35,7 @@ require 'includes/nav.php';
         <div class="article article-black">
           <a href="#"><h3>Font Styles</h3></a>
           <img src="img/articles/font.png" alt="A to Z font">
-          <p>Explore awesome fonts and enhance your web page's appearance, by applying the coolest and cross browser & device compatiple tapefaces.</p>
+          <p>Explore awesome fonts and enhance your web page's appearance, by applying the coolest and cross-browser & device compatible typefaces.</p>
           <span class="glyphicon glyphicon-calendar"></span><span> Mon, 4 June</span><span class="read-article"><a href="#">Read This</a></span>
         </div>
       </div>

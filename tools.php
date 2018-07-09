@@ -6,18 +6,20 @@ require 'includes/nav.php';
 
 ?>
 
-<main>
-  <div class="container research-area">
-    <div class="fancy-header">
-      <div class="row intro">
+<main class="research-area">
+  <div class="container"  id="full-width-tool-header">
+    <div>
+      <div class="intro">
         <h1>Tools</h1>
-        <h4>New ones added every so often.</h4><h6>Come back and check them out!</h6>
+        <h4><i class="fa fa-info-circle"></i></h4><h6>New ones added every so often.<br>Simple, but handy. See how to include them in your code.</h6>
       </div>
     </div>
-    <div class="row dotted-top">
+  </div>
+  <div class="container tool-row">
+    <div class="row">
       <div class="col-md-6">
         <label for="colorPicker" class="tool-label">Color Picker</label>
-        <p class="tool-p">Click on the box, pick a color and view its <strong>hsl</strong> & <strong>rgb</strong> numbers!</p>
+        <p class="tool-p">Click on the box, pick a color and view its <strong>hsl</strong> & <strong>rgb</strong> numbers!<br>For <strong>hex</strong> codes click <a href="https://www.rgbtohex.net/" target="_blank" class="basic-color">here</a>.</p>
         <div  id="colorPicker">
           <input type="color"name="colorPicker" value="#424242">
         </div>
@@ -63,10 +65,16 @@ require 'includes/nav.php';
         </div>
       </div>
     </div>
-    <div class="row">
+    <!--<div class="row">
+      <div class="col-md-6">
+        <label for="calendar" class="tool-label">Calendar</label>
+        <p class="tool-p">Click on the box, pick a color and view its <strong>hsl</strong> & <strong>rgb</strong> numbers!<br>For <strong>hex</strong> codes click <a href="https://www.rgbtohex.net/" target="_blank" class="basic-color">here</a>.</p>
+        <div  id="calendar">
+          <input type="date"name="calendar" value="2018-01-01" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+        </div>
+      </div>
       <div class="col-md-6"></div>
-      <div class="col-md-6"></div>
-    </div>
+    </div>-->
   </div>
 
 <?php require 'includes/footer.php'; ?>

@@ -6,11 +6,23 @@ require 'includes/nav.php';
 
 ?>
 
+<script>
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+      document.getElementById("scroll-to-top").style.display = "block";
+    } else {
+      document.getElementById("scroll-to-top").style.display = "none";
+    }
+  }
+</script>
+
 <main>
   <div class="container" id="home-menu">
     <div class="row intro">
       <h1>Info</h1>
-      <h4>Let us introduce the code playground!</h4><h6>Anything you're gonna need to know is stated here.</h4>
+      <h4><!--Let us introduce <span class="basic-color">codeTrip</span>!--><i class="fa fa-info-circle"></i></h4><h6>Anything you're gonna need to know is stated here.</h4>
     </div>
     <!--<p>A code map for the codeland!</p>-->
   </div>
@@ -21,8 +33,8 @@ require 'includes/nav.php';
     <div class="container">
       <div class="col-md-6 story">
         <h2>A Little Story</h2>
-        <p>It all started as a master thesis. Back in 2015, a complete novice computer science student had to elaborate an educational environment, which would be used by others, insterested in getting familiar with web technologies. It is what we call, in other words, a code playground...</p>
-        <p>Both client-side and server side technologies?! Uh-huh. In order to make that feasible, there was a desperate need to cut it down into smaller parts and divide functionalities. This is how every complicated problem should be solved. Research and development. One step at a time. Somehow that way, we came to this outcome. Good or bad, this is it!</p>
+        <p>It all started as a master thesis. Back in 2018, a complete novice computer science student had to elaborate an educational environment, which would be used by others, interested in getting familiar with web technologies. It is what we call, in other words, a code playground...</p>
+        <p>Both client-side and server-side technologies?! Uh-huh. In order to make that feasible, there was a desperate need to cut it down into smaller parts and divide functionalities. This is how every complicated problem should be solved. Research and development. One step at a time. Somehow that way, we came to this outcome. Good or bad, this is it!</p>
         <?php
           if (empty($_SESSION['u_id'])) {
             echo '<p>Are you a newbie, too?<a href="signup.php" class="basic-color"> Sign up</a> and discover the map to codeland!</p>';
@@ -43,6 +55,7 @@ require 'includes/nav.php';
         </ul>
       </div>
     </div>
+    <div class="move-to-top" id="scroll-to-top" style="display: none"><a href="#home-menu"><img src="img/arrow.png" alt="Top arrow"></a></div>
   </div>
   <div class="presentation about-services" id="services">
     <div class="container">
@@ -71,7 +84,7 @@ require 'includes/nav.php';
           </div>
           <div class="row service-checkbox">
             <img src="img/check.png" alt="checkbox">
-            <p> Also, available in the greek language.</p>
+            <p> View explanatory animations.</p>
           </div>
       </div>
       </div>
@@ -88,7 +101,7 @@ require 'includes/nav.php';
         </div>
       </div>
       <div class="col-md-6 story">
-        <p>We aim to provide efficient services and consistent access to up to date material. For these reasons, we maintain, debug and renew the website on a regular basis. However, there may still be a lot of malfunctions. We highly recommend that you use the Google Chrome or the Mozilla Firefox browser.</p><p>Security scores do not denote vulnerabilities, regarding sensitive data. We would like to assure you that any personal information we store is highly protected and safe. In order to report issues while running the app, please complete the contact form provided below or click <a href="https://docs.google.com/forms/d/e/1FAIpQLScKWPsrGPX-fWZ3qgZBKEKuW0FMkb4vWP9WZcjwZufBwmdx1Q/viewform?usp=sf_link" target="_blank" class="basic-color">here</a>.</p>
+        <p>We aim to provide efficient services and consistent access to up to date material. For these reasons, we maintain, debug and renew the website on a regular basis. However, there may still be lots of malfunctions. We highly recommend that you use the Google Chrome or the Mozilla Firefox browser.</p><p>Security scores do not denote vulnerabilities, regarding sensitive data. We would like to assure you that any personal information we store is highly protected and safe. In order to report issues while running the app, please complete the contact form provided below or click <a href="https://docs.google.com/forms/d/e/1FAIpQLScKWPsrGPX-fWZ3qgZBKEKuW0FMkb4vWP9WZcjwZufBwmdx1Q/viewform?usp=sf_link" target="_blank" class="basic-color">here</a>.</p>
         <p><span class="basic-color">Secret! </span>As a matter of fact, we have never taken these tests... (Oops!) The following scores simply represent our perception and our estimations on the satisfaction level of each aspect.</p>
         <!--<img src="img/analytics.png" alt="Bars of analysis and arrows.">-->
       </div>
@@ -116,7 +129,7 @@ require 'includes/nav.php';
       </div>
       <div class="col-md-6 story">
         <p>Here we go! You may have come across plenty of code playgrounds. Our goal is to</p>
-        <p>Find useful articles and links to valiable resources. Experiment with various methods and styles. Discover cool tricks and techniques.</p>
+        <p>Find useful articles and links to valuable resources. Experiment with various methods and styles. Discover cool tricks and techniques.</p>
         <!-- Additional material | Blog -->
       </div>
     </div>

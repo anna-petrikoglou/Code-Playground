@@ -31,11 +31,11 @@ if (isset($_SESSION['u_id'])) {
           ?>
         </div>
         <div class="form-group">
-          <label for="identification">Username:<sup>*</sup></label>
-          <input type="text" autocomplete="off" class="form-control" id="identification" placeholder="Username (or Email)" name="identification" required maxlength="100" value="<?php echo htmlspecialchars($_SESSION['submission']['identification']); ?>" autofocus>
+          <label for="identification">Username <sup>*</sup></label>
+          <input type="text" autocomplete="off" class="form-control" id="identification" placeholder="Username or email" name="identification" required maxlength="100" value="<?php echo htmlspecialchars($_SESSION['submission']['identification']); ?>" autofocus>
         </div>
         <div class="form-group">
-          <label for="countersign">Password:<sup>*</sup></label>
+          <label for="countersign">Password <sup>*</sup></label>
           <input type="password" autocomplete="off" class="form-control" id="countersign" placeholder="Password" name="countersign" required maxlength="256">
         </div>
         <div class="form-group">

@@ -6,16 +6,16 @@ require 'includes/head.php';
 require 'includes/nav.php';
 
 if (!isset($_SESSION['u_id'])) {
-  header("Location: web.php");
+  header("Location: login.php");
   exit();
 }
 
-$sql = 'SELECT * FROM users;';
+$mysql = 'SELECT * FROM users;';
 $project_name = 'Untitled';
 $project_id = 0;
 
 if (isset($_GET['project_id']) && isset($_SESSION['u_id'])) {
-  $sql = "SELECT * FROM projects WHERE project_id = '".$_GET['project_id']."' AND user_id = '".$_SESSION['u_id']."'";
+  $sql = "SELECT * FROM projects WHERE project_id = '".$_GET['project_id']."' AND project_type = 'sql' AND user_id = '".$_SESSION['u_id']."'";
   $result = mysqli_query($connection, $sql);
   $resultCheck = mysqli_num_rows($result);
 
@@ -32,37 +32,36 @@ if (isset($_GET['project_id']) && isset($_SESSION['u_id'])) {
 
 <main  class="playground-general">
   <div class="container practice-area">
-    <div class="row intro">
-      <h1>Practice</h1>
+    <div>
+      <?php
+        if (isset($_GET['project_id']) && isset($_SESSION['u_id'])) {
+          echo '<h4 class="basic-color"><i class="fa fa-exclamation-triangle"></i></h4><h6>You are editing an existing project.<br>If you press <span class="basic-color">"Reset"</span> and <span class="basic-color">"Save"</span> everything will be lost.<br>To create a new one click <a href="sql.php">here</a>!</h6>';
+        }
+      ?>
     </div>
     <form id="sqlform" method="post" target="iframe-result" action="playground/sql.php">
-      <div class="button-options">
-        <button type="button" name="action" value="here" id="run-code-button" class="btn"><i class="fa fa-play"></i> Run</button>
-        <button type="button" name="action" value="there" id="new-page-preview-button" class="btn"><i class="fa fa-file"></i> Preview</button>
-        <button type="reset" id="reset-editors-button" class="btn"><i class="fa fa-undo"></i> Reset</button>
-      </div>
-      <div class="col-md-12">
-        <div class="row">
-          <div class="form-group" id="project-title">
-            <label class="control-label basic-color" for="project-name">Title:</label>
-            <div>
-              <input type="text" autocomplete="project-name" class="form-control" id="project-name" value="<?php echo htmlspecialchars($project_name) ?>" placeholder="Name this project" name="project-name" required maxlength="100">
-            </div>
+      <div class="row"><div class="col-md-12">
+        <div id="project-title">
+          <!--<label class="control-label" for="project-name">Title:</label>-->
+          <input type="text" autocomplete="project-name" class="form-control" id="project-name" value="<?php echo htmlspecialchars($project_name) ?>" placeholder="Name this project" name="project-name" required maxlength="100">
         </div>
         <div>
           <input type="hidden" id="project-id" name="project-id" value="<?php echo $project_id; ?>">
-          </div>
         </div>
-      </div>
+        <div class="button-options">
+          <button type="button" name="action" value="" id="table-projects-button" class="btn"><i class="fa fa-tasks"></i> Projects</button>
+          <button type="button" name="action" value="" id="table-users-button" class="btn"><i class="fa fa-address-book-o"></i> Users</button>
+          <button type="button" name="action" value="" id="restore-db-button" class="btn"><i class="fa fa-database"></i> Database</button>
+          <button type="button" name="save" id="save-project-button" class="btn"><i class="fa fa-save"></i> Save</button>
+          <button type="reset" id="reset-editors-button" class="btn"><i class="fa fa-undo"></i> Reset</button>
+          <button type="button" name="action" value="there" id="new-page-preview-button" class="btn"><i class="fa fa-file"></i> Preview</button>
+          <button type="button" name="action" value="here" id="run-code-button" class="btn"><i class="fa fa-play"></i> Run</button>
+        </div>
+      </div></div>
       <div class="row">
         <div id="sqleditor" class="col-md-12">
           <h2>Structured Query Language</h2>
-          <textarea class="form-control textarea-code" name="mysql" rows="18" autofocus><?php echo htmlspecialchars($mysql); ?></textarea>
-        </div>
-      </div>
-      <div class="col-md-12">
-        <div class="row">
-          <button type="button" name="save" id="save-project-button" class="btn"><i class="fa fa-save"></i> Save</button>
+          <textarea class="form-control textarea-code" name="mysql" id="mysql" rows="18" autofocus><?php echo htmlspecialchars($mysql); ?></textarea>
         </div>
       </div>
     </form>

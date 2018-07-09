@@ -32,15 +32,14 @@ span {
 
 <main class="playground-general">
   <div class="container practice-area">
-    <div class="row intro">
-      <h1>Practice</h1>
-    </div>
     <form id="webform" method="post" target="iframe-result" action="playground/css.php">
-      <div class="button-options">
-        <button type="button" name="action" value="here" id="run-code-button" class="btn"><i class="fa fa-play"></i> Run</button>
-        <button type="button" name="action" value="there" id="new-page-preview-button" class="btn"><i class="fa fa-file"></i> Preview</button>
-        <button type="reset" id="reset-editors-button" class="btn"><i class="fa fa-undo"></i> Reset</button>
-      </div>
+      <div class="row"><div class="col-md-12">
+        <div class="button-options">
+          <button type="reset" id="reset-editors-button" class="btn"><i class="fa fa-undo"></i> Reset</button>
+          <button type="button" name="action" value="there" id="new-page-preview-button" class="btn"><i class="fa fa-file"></i> Preview</button>
+          <button type="button" name="action" value="here" id="run-code-button" class="btn"><i class="fa fa-play"></i> Run</button>
+        </div>
+      </div></div>
       <div class="row">
         <div id="htmleditor" class="col-md-6">
           <h2>HyperText Markup Language</h2>
