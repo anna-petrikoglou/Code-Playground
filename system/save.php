@@ -14,12 +14,22 @@ session_start();
   $project_id = mysqli_real_escape_string($connection, $_POST['project-id']);
   $u_id = $_SESSION['u_id'];
 
+
   $sql = "SELECT * FROM projects WHERE project_id = '$project_id'";
   $result = mysqli_query($connection, $sql);
   $resultCheck = mysqli_num_rows($result);
 
   if ($resultCheck == 0) {
-    $sql = "INSERT INTO projects (user_id, project_html, project_css, project_javascript, project_php, project_sql, project_name, project_date) VALUES ('$u_id', '$html', '$css', '$javascript', '$php', '$mysql', '$project_name', NOW());";
+
+    if (($html) || ($css) || ($javascript)) {
+      $type = 'web';
+    } elseif ($php) {
+      $type = 'php';
+    } elseif ($mysql) {
+      $type = 'sql';
+    }
+
+    $sql = "INSERT INTO projects (user_id, project_html, project_css, project_javascript, project_php, project_sql, project_name, project_date, project_type) VALUES ('$u_id', '$html', '$css', '$javascript', '$php', '$mysql', '$project_name', NOW(), '$type');";
     $result = mysqli_query($connection, $sql);
     //var_dump(mysqli_error($connection));
     http_response_code(200);
