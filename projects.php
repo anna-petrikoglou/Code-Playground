@@ -44,7 +44,7 @@ if (isset($_GET['trash']) and is_numeric($_GET['trash'])) {
     // output data of each row
     echo '<div class="container project-data"><h1 class="project-type-heading"><i class="fa fa-chevron-circle-right"></i> Web<span class="project-count"># '. $result2Check.'</span></h1><table class="table"><thead><tr><th>ID</th><th>Title</th><th>Edit</th><th>Last Modified</th><th>Type</th><th>Delete</th></tr></thead><tbody>';
     while($row = mysqli_fetch_assoc($result)) {
-        echo '<tr><td>' . $row["project_id"] . '</td><td><a href="http://localhost:8080/code-playground/'. $row["project_type"] . '.php?project_id='. $row["project_id"] . '">' . $row["project_name"] . '</a></td><td><a href="http://localhost:8080/code-playground/'. $row["project_type"] . '.php?project_id='. $row["project_id"] . '"><i class="fa fa-edit"></i></a></td><td>' . $row["project_date"] . '</td><td>' . $row["project_type"] . '</td><td class="basic-color"><a href="projects.php?trash='. $row["project_id"] .'"><i class="fa fa-trash"></i></a></td></tr>';
+        echo '<tr><td>' . $row["project_id"] . '</td><td><a href="./'. $row["project_type"] . '.php?project_id='. $row["project_id"] . '">' . $row["project_name"] . '</a></td><td><a href="./'. $row["project_type"] . '.php?project_id='. $row["project_id"] . '"><i class="fa fa-edit"></i></a></td><td>' . $row["project_date"] . '</td><td>' . $row["project_type"] . '</td><td class="basic-color"><a href="projects.php?trash='. $row["project_id"] .'"><i class="fa fa-trash"></i></a></td></tr>';
     }
     echo '</tbody></table></div>';
 
@@ -68,7 +68,7 @@ if (isset($_GET['trash']) and is_numeric($_GET['trash'])) {
     // output data of each row
     echo '<div class="container project-data"><h1 class="project-type-heading"><i class="fa fa-chevron-circle-right"></i> PHP<span class="project-count"># '. $result2Check.'</span></h1><table class="table"><thead><tr><th>ID</th><th>Title</th><th>Edit</th><th>Last Modified</th><th>Type</th><th>Delete</th></tr></thead><tbody>';
     while($row = mysqli_fetch_assoc($result)) {
-        echo '<tr><td>' . $row["project_id"] . '</td><td><a href="http://localhost:8080/code-playground/'. $row["project_type"] . '.php?project_id='. $row["project_id"] . '">' . $row["project_name"] . '</a></td><td><a href="http://localhost:8080/code-playground/'. $row["project_type"] . '.php?project_id='. $row["project_id"] . '"><i class="fa fa-edit"></i></a></td><td>' . $row["project_date"] . '</td><td>' . $row["project_type"] . '</td><td class="basic-color"><a href="projects.php?trash='. $row["project_id"] .'"><i class="fa fa-trash"></i></a></td></tr>';
+        echo '<tr><td>' . $row["project_id"] . '</td><td><a href="./'. $row["project_type"] . '.php?project_id='. $row["project_id"] . '">' . $row["project_name"] . '</a></td><td><a href="./'. $row["project_type"] . '.php?project_id='. $row["project_id"] . '"><i class="fa fa-edit"></i></a></td><td>' . $row["project_date"] . '</td><td>' . $row["project_type"] . '</td><td class="basic-color"><a href="projects.php?trash='. $row["project_id"] .'"><i class="fa fa-trash"></i></a></td></tr>';
     }
     echo '</tbody></table></div>';
   } else {
@@ -91,7 +91,7 @@ if (isset($_GET['trash']) and is_numeric($_GET['trash'])) {
     // output data of each row
     echo '<div class="container project-data"><h1 class="project-type-heading"><i class="fa fa-chevron-circle-right"></i> SQL<span class="project-count"># '. $result2Check.'</span></h1><table class="table"><thead><tr><th>ID</th><th>Title</th><th>Edit</th><th>Last Modified</th><th>Type</th><th>Delete</th></tr></thead><tbody>';
     while($row = mysqli_fetch_assoc($result)) {
-        echo '<tr><td>' . $row["project_id"] . '</td><td><a href="http://localhost:8080/code-playground/'. $row["project_type"] . '.php?project_id='. $row["project_id"] . '">' . $row["project_name"] . '</a></td><td><a href="http://localhost:8080/code-playground/'. $row["project_type"] . '.php?project_id='. $row["project_id"] . '"><i class="fa fa-edit"></i></a></td><td>' . $row["project_date"] . '</td><td>' . $row["project_type"] . '</td><td class="basic-color"><a href="projects.php?trash='. $row["project_id"] .'"><i class="fa fa-trash"></i></a></td></tr>';
+        echo '<tr><td>' . $row["project_id"] . '</td><td><a href="./'. $row["project_type"] . '.php?project_id='. $row["project_id"] . '">' . $row["project_name"] . '</a></td><td><a href="./'. $row["project_type"] . '.php?project_id='. $row["project_id"] . '"><i class="fa fa-edit"></i></a></td><td>' . $row["project_date"] . '</td><td>' . $row["project_type"] . '</td><td class="basic-color"><a href="projects.php?trash='. $row["project_id"] .'"><i class="fa fa-trash"></i></a></td></tr>';
     }
     echo '</tbody></table></div>';
   } else {
