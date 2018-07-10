@@ -17,24 +17,24 @@ if (isset($_POST['submit'])) {
   // Error handlers
   if ( strlen($first_name) < 3) {
     unset($_SESSION['submission']['first-name']);
-    header("Location: ../signup.php?signup=inadequate_input_length");
-    exit();
-  } elseif (strlen($last_name) < 3) {
-    unset($_SESSION['submission']['last-name']);
-    header("Location: ../signup.php?signup=inadequate_input_length");
-    exit();
-  } elseif (strlen($username) < 3) {
-    unset($_SESSION['submission']['username']);
-    header("Location: ../signup.php?signup=inadequate_input_length");
+    header("Location: ../signup.php?signup=inadequate_name_length");
     exit();
   } elseif (!preg_match("/^[a-zA-Z]*$/", $first_name)) {
     // Check if input characters are valid
     unset($_SESSION['submission']['first-name']);
     header("Location: ../signup.php?signup=invalid_first_name");
     exit();
+  } elseif (strlen($last_name) < 3) {
+    unset($_SESSION['submission']['last-name']);
+    header("Location: ../signup.php?signup=inadequate_surname_length");
+    exit();
   } elseif(!preg_match("/^[a-zA-Z]*$/", $last_name)) {
     unset($_SESSION['submission']['last-name']);
     header("Location: ../signup.php?signup=invalid_last_name");
+    exit();
+  } elseif (strlen($username) < 3) {
+    unset($_SESSION['submission']['username']);
+    header("Location: ../signup.php?signup=inadequate_username_length");
     exit();
   } elseif (strlen($password) < 4) {
     header("Location: ../signup.php?signup=inadequate_password_length");
