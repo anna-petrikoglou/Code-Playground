@@ -8,7 +8,7 @@
       <a href="help.php" class="footer-info">Help</a>
     </div>
     <div class="col-md-3">
-      <h4>Support</h4>
+      <h4>Explore</h4>
       <a href="blog.php" class="footer-info">Blog</a>
       <a href="tools.php" class="footer-info">Tools</a> <!--Color Picker-->
     </div>
@@ -17,7 +17,7 @@
       <a href="https://docs.google.com/forms/d/e/1FAIpQLScKWPsrGPX-fWZ3qgZBKEKuW0FMkb4vWP9WZcjwZufBwmdx1Q/viewform?usp=sf_link" target="_blank" class="footer-info">Form</a>
     </div>
     <div class="col-md-3 social">
-      <h4>Social Media</h4>
+      <h4>Social</h4>
       <a href="#" class="social-icon" target="_blank"><img src="img/icons/facebook.png" alt="Facebook icon" height="20" width="20" title="Like us on facebook!"></a>
       <!--<a href="#" class="social-icon" target="_blank"><img src="img/icons/messenger.png" alt="Messenger icon" height="20" width="20" title="Text us on messenger!"></a>
       <a href="#" class="social-icon" target="_blank"><img src="img/icons/youtube.png" alt="YouTube icon" height="20" width="20" title="Follow us on youtube!" placeholder="Youtube"></a>-->
