@@ -26,6 +26,20 @@ window.onload = function () {
     }
   };
 
+  //Close notifications
+  $('#close-notification').click(function() {
+    $('#web-playground-top-message').addClass('invisible');
+  });
+  $('#close-notification').hover(function() {
+    $(this).css("cursor", "pointer");
+  });
+  $('#close-save-note').click(function() {
+    $('#web-playground-save-message').addClass('invisible');
+  });
+  $('#close-save-note').hover(function() {
+    $(this).css("cursor", "pointer");
+  });
+
   saveButton.click(function () {
     // Assign handlers immediately after making the request,
     // and remember the jqxhr object for this request
@@ -34,6 +48,7 @@ window.onload = function () {
 
     jqxhr.done(function(data) {
       //alert("Project saved!");
+      $('#web-playground-save-message').removeClass('invisible');
       if ($('#project-id').val() !== $.trim(data)) {
       window.location.href = './web.php?project_id=' + data;
       }

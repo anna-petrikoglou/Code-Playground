@@ -99,6 +99,34 @@ a, a:visited, a:active, a:focus, a:hover {
   text-transform: capitalize;
 }
 
+.invisible {
+  display: none;
+}
+
+.playground-top-message {
+  /*background-color: rgba(98, 201, 186, 0.9);
+  background: radial-gradient(circle, #62c9ba, #88d7cb);*/
+  background-color: #545454;
+  color: #fff;
+  text-align: center;
+  padding: 3px 5px;
+  border-left: 7px solid #62c9ba;
+  border-top: 1px solid #a9a9a9;
+}
+
+.playground-save-message {
+  background-color: #545454;
+  color: #fff;
+  text-align: center;
+  padding: 3px 5px;
+  border-left: 7px solid #ee7600;
+  border-top: 1px solid #a9a9a9;
+}
+
+.playground-top-message h6, .playground-save-message h1 {
+  line-height: 1.5em;
+}
+
 .blink {
   /* animation: blinker 1s linear infinite; */
   text-decoration: blink;
@@ -514,7 +542,7 @@ main {
 }
 
 .home-header .intro {
-  border-bottom: 3px dashed #fff;
+  border-bottom: 1px dashed #fff;
 }
 
 .home-header h6 {
@@ -761,7 +789,7 @@ table td:nth-child(5) {
   height: 50px;
   border-radius: 40px;
   display: inline;
-  border: 4px solid #ccc;
+  border: 4px solid #f0f0f0;
 }
 
 input[type="search"]::-webkit-search-cancel-button {
@@ -907,11 +935,17 @@ input[type="search"]::-webkit-search-cancel-button {
   font-family: 'Amatic SC', cursive;
   font-size: 50px;
   color: #62c9ba;
+  text-align: center;
 }
 
 .course-image {
   margin: auto;
   display: block;
+  padding: 25px;
+  background-color: #f0f0f0;
+  border-radius: 100px;
+  height: 120px;
+  width: 120px;
 }
 
 .course .btn, button {
@@ -926,7 +960,11 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 .information {
-  text-align: justify;
+  text-align: center;
+}
+
+.course p:last-of-type, .course h6 {
+  text-align: center;
 }
 
 .playground-general, #article-page {
@@ -1150,10 +1188,14 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .dashboard-info h2 {
   font-family: 'Amatic SC', cursive;
-  font-size: 40px;
+  font-size: 45px;
   color: #62c9ba;
-  text-transform: uppercase;
   text-align: center;
+}
+
+.dashboard-info h2 i {
+  padding-bottom: 10px;
+  font-size: 50px;
 }
 
 .dashboard-info h2:first-of-type {
@@ -1219,6 +1261,10 @@ input[type="search"]::-webkit-search-cancel-button {
   padding-bottom: 10px;
 }
 
+#signature {
+  text-align: left;
+}
+
 
 
 
@@ -1253,6 +1299,11 @@ input[type="search"]::-webkit-search-cancel-button {
 
   .button-options button {
     float: none;
+    font-size: 30px;
+  }
+
+  .button-options button i {
+    font-size: 20px;
   }
 
   table {
@@ -1360,6 +1411,23 @@ input[type="search"]::-webkit-search-cancel-button {
 
   table th:nth-child(3), table th:nth-child(4), table th:nth-child(5), table tr td:nth-child(3), table tr td:nth-child(4), table tr td:nth-child(5) {
     display: none;
+  }
+
+  #project-title {
+    width: 100%;
+  }
+
+  #project-name {
+    text-align: center;
+  }
+
+  .button-options button {
+    float: none;
+    font-size: 35px;
+  }
+
+  .button-options button i {
+    font-size: 25px;
   }
 
   .project-area .container {
