@@ -63,7 +63,42 @@ if (isset($_POST['submit'])) {
           $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
           // Insert user into database
           $sql = "INSERT INTO users (user_first_name, user_last_name, user_email, user_username, user_password, user_date) VALUES ('$first_name', '$last_name', '$email', '$username', '$hashedPassword', NOW());";
-          mysqli_query($connection, $sql); //or $result = mysqli_query($connection, $sql);
+          mysqli_query($connection, $sql);
+
+          if ($_SERVER['HTTP_HOST'] == 'codetrip.gr') {
+            require_once '../../../create-database.php';
+            $res = create_database($username);
+
+            $build_db = file_get_contents('../playground/codetrip_gr_2.sql');
+
+            $dbServername = "localhost";
+            $dbTestUsername = 'codetrip_'.$username;
+            $dbTestPassword = "feg53Hdf3a3";
+            $dbTestName = 'codetrip_'.$username;
+
+            $connectionTest = mysqli_connect($dbServername, $dbTestUsername, $dbTestPassword, $dbTestName);
+
+            mysqli_multi_query($connectionTest, $build_db);
+          }
+
+          /*
+          mysqli_query($connection, "CREATE DATABASE $username");
+          mysqli_query($connection, "CREATE USER '$email'@'localhost' IDENTIFIED BY '1111111';");
+          mysqli_query($connection, "GRANT ALL ON $username.* TO '$email'@'localhost'");
+          mysqli_query($connection, "ALTER USER '$email'@'localhost' WITH MAX_QUERIES_PER_HOUR 50");
+
+          $build_db = file_get_contents('../playground/codetrip_gr_2.sql');
+
+          $dbServername = "localhost:3308";
+          $dbTestUsername = $email;
+          $dbTestPassword = "1111111";
+          $dbTestName = $username;
+
+          $connectionTest = mysqli_connect($dbServername, $dbTestUsername, $dbTestPassword, $dbTestName);
+
+          mysqli_multi_query($connectionTest, $build_db);
+          */
+
           header("Location: ../login.php?signup=success");
           exit();
         }

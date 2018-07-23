@@ -2,6 +2,11 @@
 
 session_start();
 
+if(!isset($_POST['del-account'])) {
+  header("Location: ../account.php");
+  exit();
+}
+
 $_SESSION['submission'] = $_POST;
 
 if (isset($_POST['submit'])) {
@@ -13,8 +18,10 @@ if (isset($_POST['submit'])) {
   // If checkbox is checked
   if (isset($_POST['del-account'])) {
     // Delete user data from database
-    $sql = "DELETE * FROM users INNER JOIN projects WHERE users.user_id = projects.user_id AND users.user_id = '".$_SESSION['u_id']."'";
-    mysqli_query($connection, $sql);
+    $sql_1 = "DELETE FROM users WHERE user_id = '".$_SESSION['u_id']."'";
+    $sql_2 = "DELETE FROM projects WHERE user_id = '".$_SESSION['u_id']."'";
+    mysqli_query($connection, $sql_1);
+    mysqli_query($connection, $sql_2);
     header("Location: ../system/logout.php");
     exit();
   }
