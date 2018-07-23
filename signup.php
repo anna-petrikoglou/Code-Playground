@@ -14,7 +14,7 @@ if (isset($_SESSION['u_id'])) {
 <main>
   <div id="signuppage">
     <div class="intro">
-      <h1>Create your account</h1>
+      <h1>Sign Up</h1>
       <!--<h4>Gain access to additional functionalities. Use powerful tools!</h4>
       <h6>Please, read input requirements in the <a href="help.php" class="basic-color">Help</a> section of the website.<br>In case you are facing issues, you may also contact us at <span class="basic-color">info@codetrip.gr</span>.</h6>-->
     </div>
@@ -22,8 +22,12 @@ if (isset($_SESSION['u_id'])) {
       <form class="form-horizontal" action="system/signup.php" method="post">
         <div class="warnings">
           <?php
-            if(isset($_GET['signup']) and $_GET['signup'] == 'inadequate_input_length') {
-              echo '<span id="warning4" class="blink"><i class="fa fa-exclamation-triangle"></i> Too short name</span>';
+            if(isset($_GET['signup']) and $_GET['signup'] == 'inadequate_name_length') {
+              echo '<span id="warning4a" class="blink"><i class="fa fa-exclamation-triangle"></i> Too short first name</span>';
+            } elseif(isset($_GET['signup']) and $_GET['signup'] == 'inadequate_surname_length') {
+              echo '<span id="warning4b" class="blink"><i class="fa fa-exclamation-triangle"></i> Too short last name</span>';
+            } elseif(isset($_GET['signup']) and $_GET['signup'] == 'inadequate_username_length') {
+              echo '<span id="warning4c" class="blink"><i class="fa fa-exclamation-triangle"></i> Too short username</span>';
             } elseif(isset($_GET['signup']) and $_GET['signup'] == 'invalid_first_name') {
               echo '<span id="warning5" class="blink"><i class="fa fa-exclamation-triangle"></i> Invalid first name</span>';
             } elseif(isset($_GET['signup']) and $_GET['signup'] == 'inadequate_password_length') {
@@ -55,7 +59,7 @@ if (isset($_SESSION['u_id'])) {
         </div>
         <div class="form-group">
           <label for="username">Username <sup>*</sup></label>
-          <input type="text" autocomplete="username" class="form-control" id="username" placeholder="Username" name="username" required maxlength="100" value="<?php if (isset($_SESSION['submission'])) { echo htmlspecialchars($_SESSION['submission']['username']); } ?>">
+          <input type="text" pattern="[a-zA-Z0-9-]+" autocomplete="username" class="form-control" id="username" placeholder="Username" name="username" required maxlength="100" value="<?php if (isset($_SESSION['submission'])) { echo htmlspecialchars($_SESSION['submission']['username']); } ?>">
         </div>
         <div class="form-group">
           <div class="halfway-left">

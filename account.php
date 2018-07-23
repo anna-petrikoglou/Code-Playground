@@ -28,7 +28,7 @@ if (!isset($_SESSION['u_id'])) {
     </div>-->
     <div class="col-md-12">
       <form method="post" class="dashboard-info" action="system/update_data.php">
-        <h2>Personal Information</h2>
+        <h2><i class="fa fa-drivers-license-o"></i><br>Personal Information</h2>
         <p>Check and edit your personal data.</p>
         <div class="warnings">
           <?php
@@ -49,24 +49,24 @@ if (!isset($_SESSION['u_id'])) {
         </div>
         <div class="form-group">
             <label for="first-name">First Name</label>
-            <input type="text" autocomplete="first-name" class="form-control" id="first-name" name="first-name" placeholder="Name" required maxlength="50" value="<?php echo htmlspecialchars($_SESSION['u_first_name']); ?>" autofocus>
+            <input type="text" autocomplete="first-name" class="form-control" id="first-name" name="first-name" placeholder="Name" required maxlength="50" value="<?php if (isset($_SESSION['submission'])) { echo htmlspecialchars($_SESSION['submission']['first-name']); } else { echo htmlspecialchars($_SESSION['u_first_name']); } ?>" autofocus>
         </div>
         <div class="form-group">
           <label for="last-name">Last Name</label>
-          <input type="text" autocomplete="last-name" class="form-control" id="last-name" name="last-name" placeholder="Surname" required maxlength="70" value="<?php echo htmlspecialchars($_SESSION['u_last_name']); ?>">
+          <input type="text" autocomplete="last-name" class="form-control" id="last-name" name="last-name" placeholder="Surname" required maxlength="70" value="<?php if (isset($_SESSION['submission'])) { echo htmlspecialchars($_SESSION['submission']['last-name']); } else { echo htmlspecialchars($_SESSION['u_last_name']); } ?>">
         </div>
         <div class="form-group">
             <label for="email">Email Address</label>
-            <input type="email" autocomplete="email" class="form-control" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="Email" required maxlength="100" value="<?php echo htmlspecialchars($_SESSION['u_email']); ?>">
+            <input type="email" autocomplete="email" class="form-control" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="Email" required maxlength="100" value="<?php if (isset($_SESSION['submission'])) { echo htmlspecialchars($_SESSION['submission']['email']); } else { echo htmlspecialchars($_SESSION['u_email']); } ?>">
         </div>
         <div class="form-group">
             <label for="username">Username</label>
-            <input type="text" autocomplete="username" class="form-control" id="username" name="username" placeholder="Username" required maxlength="100" value="<?php echo htmlspecialchars($_SESSION['u_username']); ?>">
+            <input type="text" autocomplete="username" class="form-control" id="username" name="username" placeholder="Username" required maxlength="100" value="<?php if (isset($_SESSION['submission'])) { echo htmlspecialchars($_SESSION['submission']['username']); } else { echo htmlspecialchars($_SESSION['u_username']); } ?>">
         </div>
         <button type="submit" class="btn" name="submit">Update</button>
       </form>
       <form method="post" class="dashboard-info" action="system/update_password.php">
-        <h2>Security</h2>
+        <h2><i class="fa fa-lock"></i><br>Security</h2>
         <p>Generate a new password.</p>
         <div class="warnings">
           <?php
@@ -90,7 +90,7 @@ if (!isset($_SESSION['u_id'])) {
         <button type="submit" class="btn" name="submit">Change</button>
       </form>
       <form method="post" class="dashboard-info" action="system/delete.php">
-        <h2>Membership</h2>
+        <h2><i class="fa fa-frown-o"></i><br>Membership</h2>
         <p>Delete your account.<br><br><span class="basic-color"><i class="fa fa-exclamation-triangle"></i></span>  Caution! This action is irreversible.</p>
         <div>
           <input type="checkbox" id="del-account" name="del-account" value="Definitely, delete my account.">

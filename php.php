@@ -30,15 +30,14 @@ if (isset($_GET['project_id']) && isset($_SESSION['u_id'])) {
 
 ?>
 
+<?php
+  if (isset($_GET['project_id']) && isset($_SESSION['u_id'])) {
+    echo '<div class="playground-top-message" id="php-playground-top-message"><span id="close-notification"><i class="fa fa-times-circle" style="float: right;"></i></span><h6 class="blink"><span class="basic-color" style="font-size: 15px; vertical-align: baseline;"><i class="fa fa-exclamation-triangle"></i></span> You are editing an existing project. If you press <span class="basic-color">"Reset"</span> and <span class="basic-color">"Save"</span> everything will be lost. Click <a href="web.php">here</a> to create a new one!</h6></div><div class="playground-save-message invisible" id="php-playground-save-message"><span id="close-save-note"><i class="fa fa-times-circle" style="float: right;"></i></span><h6 class="blink"><span class="basic-color" style="font-size: 15px; vertical-align: baseline;"><i class="fa fa-check"></i></span> All changes have been saved successfully.</h6></div>';
+  }
+?>
+
 <main class="playground-general">
   <div class="container practice-area">
-    <div>
-      <?php
-        if (isset($_GET['project_id']) && isset($_SESSION['u_id'])) {
-          echo '<h4 class="basic-color"><i class="fa fa-exclamation-triangle"></i></h4><h6>You are editing an existing project.<br>If you press <span class="basic-color">"Reset"</span> and <span class="basic-color">"Save"</span> everything will be lost.<br>To create a new one click <a href="php.php">here</a>!</h6>';
-        }
-      ?>
-    </div>
     <form id="phpform" method="post" target="iframe-result" action="playground/php.php">
       <div class="row"><div class="col-md-12">
         <div id="project-title">

@@ -30,15 +30,14 @@ if (isset($_GET['project_id']) && isset($_SESSION['u_id'])) {
 
 ?>
 
+<?php
+  if (isset($_GET['project_id']) && isset($_SESSION['u_id'])) {
+    echo '<div class="playground-top-message" id="sql-playground-top-message"><span id="close-notification"><i class="fa fa-times-circle" style="float: right;"></i></span><h6 class="blink"><span class="basic-color" style="font-size: 15px; vertical-align: baseline;"><i class="fa fa-exclamation-triangle"></i></span> You are editing an existing project. If you press <span class="basic-color">"Reset"</span> and <span class="basic-color">"Save"</span> everything will be lost. Click <a href="web.php">here</a> to create a new one!</h6></div><div class="playground-save-message invisible" id="sql-playground-save-message"><span id="close-save-note"><i class="fa fa-times-circle" style="float: right;"></i></span><h6 class="blink"><span class="basic-color" style="font-size: 15px; vertical-align: baseline;"><i class="fa fa-check"></i></span> All changes have been saved successfully.</h6></div>';
+  }
+?>
+
 <main  class="playground-general">
   <div class="container practice-area">
-    <div>
-      <?php
-        if (isset($_GET['project_id']) && isset($_SESSION['u_id'])) {
-          echo '<h4 class="basic-color"><i class="fa fa-exclamation-triangle"></i></h4><h6>You are editing an existing project.<br>If you press <span class="basic-color">"Reset"</span> and <span class="basic-color">"Save"</span> everything will be lost.<br>To create a new one click <a href="sql.php">here</a>!</h6>';
-        }
-      ?>
-    </div>
     <form id="sqlform" method="post" target="iframe-result" action="playground/sql.php">
       <div class="row"><div class="col-md-12">
         <div id="project-title">
@@ -49,7 +48,7 @@ if (isset($_GET['project_id']) && isset($_SESSION['u_id'])) {
           <input type="hidden" id="project-id" name="project-id" value="<?php echo $project_id; ?>">
         </div>
         <div class="button-options">
-          <button type="button" name="action" value="" id="table-projects-button" class="btn"><i class="fa fa-tasks"></i> Projects</button>
+          <button type="button" name="action" value="" id="table-groups-button" class="btn"><i class="fa fa-group"></i> Groups</button>
           <button type="button" name="action" value="" id="table-users-button" class="btn"><i class="fa fa-address-book-o"></i> Users</button>
           <button type="button" name="action" value="" id="restore-db-button" class="btn"><i class="fa fa-database"></i> Database</button>
           <button type="button" name="save" id="save-project-button" class="btn"><i class="fa fa-save"></i> Save</button>

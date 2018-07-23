@@ -14,7 +14,7 @@ if (isset($_SESSION['u_id'])) {
 <main>
   <div id="loginpage">
     <div class="intro">
-      <h1>Sign In</h1>
+      <h1>Login</h1>
       <!--<h4>Enjoy more features!</h4>-->
     </div>
     <div class="container" id="login-form">

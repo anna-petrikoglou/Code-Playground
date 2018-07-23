@@ -33,7 +33,7 @@ require 'includes/nav.php';
     <div class="container">
       <div class="col-md-6 story">
         <h2>A Little Story</h2>
-        <p>It all started as a master thesis. Back in 2018, a complete novice computer science student had to elaborate an educational environment, which would be used by others, interested in getting familiar with web technologies. It is what we call, in other words, a code playground...</p>
+        <p>It all started as a master thesis. Back in 2018, a complete novice computer science student had to elaborate an educational environment, which would be used by others, interested in getting familiar with web technologies. It is what we call, in other words, a code playground.</p>
         <p>Both client-side and server-side technologies?! Uh-huh. In order to make that feasible, there was a desperate need to cut it down into smaller parts and divide functionalities. This is how every complicated problem should be solved. Research and development. One step at a time. Somehow that way, we came to this outcome. Good or bad, this is it!</p>
         <?php
           if (empty($_SESSION['u_id'])) {
@@ -101,8 +101,8 @@ require 'includes/nav.php';
         </div>
       </div>
       <div class="col-md-6 story">
-        <p>We aim to provide efficient services and consistent access to up to date material. For these reasons, we maintain, debug and renew the website on a regular basis. However, there may still be lots of malfunctions. We highly recommend that you use the Google Chrome or the Mozilla Firefox browser.</p><p>Security scores do not denote vulnerabilities, regarding sensitive data. We would like to assure you that any personal information we store is highly protected and safe. In order to report issues while running the app, please complete the contact form provided below or click <a href="https://docs.google.com/forms/d/e/1FAIpQLScKWPsrGPX-fWZ3qgZBKEKuW0FMkb4vWP9WZcjwZufBwmdx1Q/viewform?usp=sf_link" target="_blank" class="basic-color">here</a>.</p>
-        <p><span class="basic-color">Secret! </span>As a matter of fact, we have never taken these tests... (Oops!) The following scores simply represent our perception and our estimations on the satisfaction level of each aspect.</p>
+        <p>We aim to provide efficient services and consistent access to the up-to-date material. For these reasons, we maintain, debug and renew the website on a regular basis. However, there may still be lots of malfunctions. We highly recommend that you use the Google Chrome or the Mozilla Firefox browser.</p><p>Security scores do not denote vulnerabilities, regarding sensitive data. We would like to assure you that any personal information we store is highly protected and safe. To report issues while running the app, please complete the contact form provided below or click <a href="https://docs.google.com/forms/d/e/1FAIpQLScKWPsrGPX-fWZ3qgZBKEKuW0FMkb4vWP9WZcjwZufBwmdx1Q/viewform?usp=sf_link" target="_blank" class="basic-color">here</a>.</p>
+        <p><span class="basic-color">Secret! </span>As a matter of fact, we have never taken these tests. (Oops!) The following scores simply represent our perception and estimations on the satisfaction level of each aspect. But, trust me. We are not that indulgent!</p>
         <!--<img src="img/analytics.png" alt="Bars of analysis and arrows.">-->
       </div>
       <div class="col-md-6">
@@ -128,8 +128,9 @@ require 'includes/nav.php';
         <img src="img/web-dev.png" alt="Fixing a code editor.">
       </div>
       <div class="col-md-6 story">
-        <p>Here we go! You may have come across plenty of code playgrounds. Our goal is to</p>
-        <p>Find useful articles and links to valuable resources. Experiment with various methods and styles. Discover cool tricks and techniques.</p>
+        <p>Here we go! You may have come across plenty of code playgrounds. Our goal is to offer you a comprehensive understanding of how fundamental web technologies operate, interact and shape entire applications and websites. Ok, you have to do most of it by yourself. But, you have valuable development tools!</p>
+        <p>Learn how to create static and dynamic web pages, add functionalities, enhance content, make responsive designs and much more. Savvy client-server communication and database management.</p>
+        <p>Find useful articles and links to valuable resources. Experiment with various methods and styles. Discover cool tricks and techniques. Get used to searching, reading and practising new things!</p>
         <!-- Additional material | Blog -->
       </div>
     </div>
@@ -142,8 +143,18 @@ require 'includes/nav.php';
         </div>
       </div>
       <div class="col-md-6 story">
-          <p>Imagine you have got some plain materials... lots of metal and plastic or wooden parts, screws or nails and cables or ropes. Now, you would like to make something out of these. But, you don't know how. Would it be simple or complicated, colorful or black-and-white, big or small, static or active?</p>
-          <p class="signature"></p>
+          <p>If you still have unanswered questions you can also visit the <a href="./help.php">help</a> section or contact us at <span class="basic-color">info@codetrip.gr</span>! We will be happy to serve you. We would also like to receive your remarks on CodeTrip and your suggestions for further improvements. We could review together some of the following points or else!</p>
+          <ul><br>
+            <li>UI & UX</li>
+            <li>Services & Enhancement</li>
+            <li>Performance & Error Handling</li>
+            <li>Efficiency & Effectiveness</li>
+            <li>Security Issues</li>
+          </ul>
+          <p>By the way, we apologise in advance for any inconvenience and urge you to report any problems you may encounter. Help us to become better! Don't forget to sign up and enjoy the whole CodeTrip experience! Have fun and build awesome stuff!</p>
+          <p id="signature">
+            <i>Kind thanks,<br>The CodeTrip Team</i>
+          </p>
       </div>
       <div class="col-md-6 about">
         <img src="img/user.png" alt="A targeted user.">
