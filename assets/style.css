@@ -356,7 +356,7 @@ main {
   height: 60px;
 }
 
-.service-checkbox img:hover, .about-support .about:hover {
+.service-checkbox img:hover {
   /* https://www.webdesignerdepot.com/2014/05/8-simple-css3-transitions-that-will-wow-your-users/ */
   -webkit-transform: scale(0.8);
   -ms-transform: scale(0.8);
@@ -364,6 +364,10 @@ main {
   -webkit-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
   transition: 150ms;
+}
+
+.about-support .about {
+  height: 700px;
 }
 
 .about {
@@ -740,9 +744,24 @@ table td:nth-child(5) {
   height: 150px;
 }
 
-.move-to-top {
+#scroll-to-top {
+  bottom: 100px;
+}
+
+#go-to-blog {
+  bottom: 460px;
+}
+
+#go-to-tools {
+  bottom: 340px;
+}
+
+#go-to-help {
+  bottom: 220px;
+}
+
+.move-to {
   right: 0;
-  bottom: 80px;
   position: fixed;
   width: 100px;
   height: 100px;
@@ -1262,7 +1281,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 #signature {
-  text-align: left;
+  text-align: right;
 }
 
 
@@ -1273,6 +1292,10 @@ input[type="search"]::-webkit-search-cancel-button {
   .big-image {
     width: 100%;
     height: auto;
+  }
+
+  .about img {
+    max-width: 320px;
   }
 
   .course {
@@ -1314,8 +1337,8 @@ input[type="search"]::-webkit-search-cancel-button {
     display: none;
   }
 
-  .move-to-top {
-    display: none;
+  .move-to {
+    display: none !important;
   }
 
   #colorPicker, #calculator {
@@ -1434,8 +1457,8 @@ input[type="search"]::-webkit-search-cancel-button {
     width: 90%;
   }
 
-  .move-to-top {
-    display: none;
+  .move-to {
+    display: none !important;
   }
 
   #colorPicker, #calculator {
