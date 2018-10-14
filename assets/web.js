@@ -1,5 +1,7 @@
 window.onload = function () {
 
+autoRun();
+
   const runButton = document.getElementById("run-code-button");
   const newPagePreview = document.getElementById("new-page-preview-button");
   const resetButton = document.getElementById("reset-editors-button");
@@ -12,6 +14,14 @@ window.onload = function () {
     form.setAttribute("target", "iframe-result");
     form.submit();
   };
+
+//Run code automatically every 5 seconds.
+  function autoRun() {
+      setInterval(function(){
+        form.setAttribute("target", "iframe-result");
+        form.submit();
+    }, 5000);
+  }
 
 // Display result on a different page.
   newPagePreview.onclick = function () {

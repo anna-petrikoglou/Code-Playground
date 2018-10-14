@@ -59,7 +59,7 @@ window.onload = function () {
 
   // Restore Database
     $('#restore-db-button').click(function() {
-      $.post('../playground/sql.php', {'restore-db-button':true}, function() {
+      $.post('./playground/sql.php', {'restore-db-button':true}, function() {
         $('#mysql').val('SELECT * FROM users;');
         $('#run-code-button').click();
       });
