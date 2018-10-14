@@ -28,7 +28,7 @@ require 'includes/nav.php';
   <div class="container" id="home-menu">
     <div class="row intro">
       <h1>Info</h1>
-      <h4><!--Let us introduce <span class="basic-color">codeTrip</span>!--><i class="fa fa-info-circle"></i></h4><h6>Anything you're gonna need to know is stated here.</h4>
+      <h4><!--Let us introduce <span class="basic-color">codeTrip</span>!--><i class="fa fa-info-circle"></i></h4><h6 style="line-height:1.5em">Anything you're gonna need to know is stated here.<br>And <a href="/help.php">there</a>!</h4>
     </div>
     <!--<p>A code map for the codeland!</p>-->
   </div>

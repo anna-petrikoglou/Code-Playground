@@ -15,7 +15,7 @@ if (isset($_SESSION['u_id'])) {
   <div class="container">
     <div class="col-md-12 intro">
       <h1>Hey there!</h1>
-      <h4>Got a great idea? About to create something new? Just practising?<br>Join us! Learn more <a href="about.php" class="basic-color">here</a>.</h4>
+      <h4>Got a great idea? About to create something new? Just practising?<br>Join us! Learn more <a href="help.php" class="basic-color">here</a>.</h4>
     </div>
   </div>
 </header>

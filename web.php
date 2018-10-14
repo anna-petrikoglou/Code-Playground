@@ -63,15 +63,15 @@ if (isset($_GET['project_id']) && isset($_SESSION['u_id'])) {
       <div class="row">
         <div id="htmleditor" class="col-md-4">
           <h2>HyperText Markup Language</h2>
-          <textarea class="form-control textarea-code" name="html" rows="18" autofocus><?php echo htmlspecialchars($html); ?></textarea>
+          <textarea class="form-control textarea-code" id="htmleditor-html" name="html" rows="18" autofocus><?php echo htmlspecialchars($html); ?></textarea>
         </div>
         <div id="csseditor" class="col-md-4">
           <h2>Cascading Style Sheets</h2>
-          <textarea class="form-control textarea-code" name="css" rows="18"><?php echo htmlspecialchars($css); ?></textarea>
+          <textarea class="form-control textarea-code" id="csseditor-css" name="css" rows="18"><?php echo htmlspecialchars($css); ?></textarea>
         </div>
         <div id="jseditor" class="col-md-4">
           <h2>JavaScript</h2>
-          <textarea class="form-control textarea-code" name="javascript" rows="18"><?php echo htmlspecialchars($javascript); ?></textarea>
+          <textarea class="form-control textarea-code" id="jseditor-js" name="javascript" rows="18"><?php echo htmlspecialchars($javascript); ?></textarea>
         </div>
       </div>
     </form>
@@ -88,10 +88,28 @@ if (isset($_GET['project_id']) && isset($_SESSION['u_id'])) {
       </div>
     </div>
   </div>
-  <!--<div class="in-the-background">
-    <div>
+  <div class="in-the-background">
+    <div class="col-md-4">
+      <div class="animation-part">
+        <i class="fa fa-desktop"></i>
+      </div>
     </div>
-  </div>-->
+    <div class="col-md-4">
+      <div class="animation-part">
+        <i class="fa fa-chrome fa-pulse"></i>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="animation-part">
+        <i class="fa fa-server"></i>
+      </div>
+    </div>
+    <div class="col-md-1">
+      <div class="animation-part">
+        <i class="fa fa-archive"></i>
+      </div>
+    </div>
+  </div>
 
   <?php require 'includes/footer.php'; ?>
 

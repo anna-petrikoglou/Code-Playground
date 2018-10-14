@@ -25,7 +25,7 @@ if (!isset($_SESSION['u_id'])) {
   <div class="col-md-12 full-width">
     <form id="searchform" method="get" target="_blank" action="https://www.google.com/search">
       <div class="col-md-12 presentation user-parts" id="search-part">
-        <h4><i class="fa fa-info-circle"></i></h4><h6>A web developer's most favorite tool is Google's search engine!<br>So, go for whatever you want...</h6>
+        <h4><i class="fa fa-info-circle"></i></h4><h6>A web developer's most favorite tool is a search engine!<br>So, go for whatever you want...</h6>
         <div class="form-group" id="search-google">
           <div id="search-area">
             <input type="search" name="q" autocomplete="search" class="form-control" id="search" placeholder="What are you looking for?" maxlength="10000" required>
@@ -89,6 +89,7 @@ if (!isset($_SESSION['u_id'])) {
             <h1>Tools & Samples</h1>
             <p class="light story">One step at a time. Here is how to create meaningful stuff starting with the basics. Utilize handy tools, that are regularly expanding and practice on samples.</p>
             <a href="tools.php" class="dark">View Tools</a>
+            <a href="samples.php" class="dark">View Samples</a>
           </div>
           <div class="col-md-6">
             <img src="img/calculator.png" alt="calculator">

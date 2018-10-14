@@ -8,18 +8,16 @@ require 'includes/nav.php';
 
 <main class="research-area">
   <div class="container"  id="full-width-tool-header">
-    <div>
-      <div class="intro">
-        <h1>Tools</h1>
-        <h4><i class="fa fa-info-circle"></i></h4><h6>New ones added every so often.<br>Simple, but handy. See how to include them in your code.</h6>
-      </div>
+    <div class="intro">
+      <h1>Tools</h1>
+      <h4><i class="fa fa-info-circle"></i></h4><h6>New ones added every so often.<br>Simple, but handy. Learn how to include them in your code.</h6>
     </div>
   </div>
   <div class="container tool-row">
     <div class="row">
       <div class="col-md-6">
         <label for="colorPicker" class="tool-label">Color Picker</label>
-        <p class="tool-p">Click on the box, pick a color and view its <strong>hsl</strong> & <strong>rgb</strong> numbers!<br>For <strong>hex</strong> codes click <a href="https://www.rgbtohex.net/" target="_blank" class="basic-color">here</a>.</p>
+        <p class="tool-p">Click on the box, pick a color and view its <strong>hsl</strong>, <strong>hex</strong> or <strong>rgb</strong> numbers!<!--<br>For <strong>hex</strong> codes click <a href="https://www.rgbtohex.net/" target="_blank" class="basic-color">here</a>.--></p>
         <div  id="colorPicker">
           <input type="color"name="colorPicker" value="#424242">
         </div>
@@ -49,13 +47,13 @@ require 'includes/nav.php';
             <input type="button" value="9" onclick="document.calculator.ans.value+='9'" style="width: 62px; height: 35px">
           </p>
           <p>
-            <input type="button" value="0" onclick="document.calculator.ans.value+='0'" style="width: 62px; height: 35px">
             <input type="button" value="+" onclick="document.calculator.ans.value+='+'" style="width: 62px; height: 35px">
-            <input type="button" value="-" onclick="document.calculator.ans.value+='-'" style="width: 62px; height: 35px">
+            <input type="button" value="0" onclick="document.calculator.ans.value+='0'" style="width: 62px; height: 35px">
+            <input type="button" value="*" onclick="document.calculator.ans.value+='*'" style="width: 62px; height: 35px">
           </p>
           <p>
+            <input type="button" value="-" onclick="document.calculator.ans.value+='-'" style="width: 62px; height: 35px">
             <input type="button" value="=" onclick="document.calculator.ans.value=eval(document.calculator.ans.value)" style="width: 62px; height: 35px">
-            <input type="button" value="*" onclick="document.calculator.ans.value+='*'" style="width: 62px; height: 35px">
             <input type="button" value="/" onclick="document.calculator.ans.value+='/'" style="width: 62px; height: 35px">
           </p>
           <p>
