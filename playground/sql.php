@@ -9,6 +9,8 @@ if(!isset($_POST['mysql'])) {
 
 if(isset($_POST['restore-db-button'])) {
 
+  $new_sql = file_get_contents('./codetrip_gr_2.sql');
+
   if ($_SERVER['HTTP_HOST'] == 'codetrip.gr') {
     $dbServername = "localhost";
     $dbTestUsername = 'codetrip_'.$_SESSION['u_username'];
@@ -22,7 +24,7 @@ if(isset($_POST['restore-db-button'])) {
   }
 
   $connectionTest = mysqli_connect($dbServername, $dbTestUsername, $dbTestPassword, $dbTestName);
-  $new_sql = file_get_contents('./codetrip_gr_2.sql');
+
   mysqli_multi_query($connectionTest, $new_sql);
 }
 
@@ -94,7 +96,8 @@ if(isset($_POST['restore-db-button'])) {
       echo $rowsChanged;
 
     } elseif ($result == FALSE) {
-        echo '<p>There is an error in your code!</p>';
+      echo '<p>There is an error in your code!</p>';
+      echo mysqli_error($connectionTest);
     }
   }
   ?>
