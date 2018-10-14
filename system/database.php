@@ -2,7 +2,7 @@
 
 error_reporting(E_ALL & ~E_NOTICE);
 
-$dbServername = "localhost:3308";
+$dbServername = "localhost";
 $dbUsername = "root";
 $dbPassword = "";
 $dbName = "code_playground";
